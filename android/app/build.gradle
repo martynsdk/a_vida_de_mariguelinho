@@ -60,6 +60,7 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    namespace 'com.example.a_vida_de_mariguelinho'
 }
 
 flutter {
