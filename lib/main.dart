@@ -47,18 +47,27 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Quantidade de vezes que o botão foi pressionado:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                alignment: Alignment.topCenter,
+                margin: const EdgeInsets.all(10.0),
+                child: Image.asset('assets/mariguelinho_main_picture.jpg',fit: BoxFit.contain, ),
+              ),
+              const Text(
+                'Quantidade de vezes que o botão foi pressionado:',
+              ),
+              Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+            ],
+
+          ),
         ),
+
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
