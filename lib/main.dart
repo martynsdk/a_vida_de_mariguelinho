@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +42,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
-
-    final List<String> imageList = ["assets/mariguelinho1.jpg",
+    final List<String> imageList = [
+      "assets/mariguelinho1.jpg",
       'assets/mariguelinho_main_picture.jpg'
     ];
-
-
 
     return Scaffold(
       appBar: AppBar(
@@ -59,7 +56,6 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-
               const Text(
                 'Quantidade de vezes que o botão foi pressionado:',
               ),
@@ -70,21 +66,21 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 alignment: Alignment.topCenter,
                 margin: const EdgeInsets.all(10.0),
-                child: Image.asset('assets/mariguelinho_main_picture.jpg',fit: BoxFit.fill, ),
+                child: Image.asset(
+                  'assets/mariguelinho_main_picture.jpg',
+                  fit: BoxFit.fill,
+                ),
               ),
-
               Container(
                 height: MediaQuery.of(context).size.height,
                 margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     image: const DecorationImage(
-                        image: AssetImage('assets/mariguelinho_main_picture.jpg'),
-                        fit: BoxFit.fill
-                    ),
-                    borderRadius: BorderRadius.circular(15)
-                ),
+                        image:
+                            AssetImage('assets/mariguelinho_main_picture.jpg'),
+                        fit: BoxFit.fill),
+                    borderRadius: BorderRadius.circular(15)),
               ),
-
               Container(
                 margin: EdgeInsets.all(15),
                 child: CarouselSlider.builder(
@@ -97,14 +93,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     reverse: false,
                     aspectRatio: 5.0,
                   ),
-                  itemBuilder: (context, i, id){
+                  itemBuilder: (context, i, id) {
                     //for onTap to redirect to another screen
                     return GestureDetector(
                       child: Container(
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: Colors.white,)
-                        ),
+                            border: Border.all(
+                              color: Colors.white,
+                            )),
                         //ClipRRect for image border radius
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(15),
@@ -116,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                       ),
-                      onTap: (){
+                      onTap: () {
                         var url = imageList[i];
                         print(url.toString());
                       },
@@ -124,15 +121,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 ),
               ),
-
-
-
-
             ],
-
           ),
         ),
-
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
