@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       onTap: () {
                         var url = imageList[i];
-                        //print(url.toString());
+                        print(url.toString());
                       },
                     );
                   },
