@@ -43,8 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final List<String> imageList = [
-      'assets/mariguelinho1.jpg',
-      'assets/mariguelinho_main_picture.jpg'
+      "assets/mariguelinho1.jpg",
+      "assets/mariguelinho_main_picture.jpg"
     ];
 
     return Scaffold(
@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           borderRadius: BorderRadius.circular(15),
                           child: Image.network(
                             imageList[i],
-                            width: 500,
+                            width: 300,
                             fit: BoxFit.fill,
                             //fit: BoxFit.contain
                           ),
@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       onTap: () {
                         var url = imageList[i];
-                        print(url.toString());
+                        //print(url.toString());
                       },
                     );
                   },
