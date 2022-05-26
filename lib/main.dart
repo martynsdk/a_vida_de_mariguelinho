@@ -43,12 +43,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final List<String> imageList = [
-      "assets/mariguelinho1.jpg",
+      'assets/mariguelinho1.jpg',
       'assets/mariguelinho_main_picture.jpg'
     ];
 
     return Scaffold(
       appBar: AppBar(
+
         title: Text(widget.title),
       ),
       body: Center(
@@ -115,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       onTap: () {
                         var url = imageList[i];
-                        print(url.toString());
+                        //print(url.toString());
                       },
                     );
                   },
@@ -123,6 +124,43 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           ),
+        ),
+      ),
+      drawer: Drawer(
+        // Add a ListView to the drawer. This ensures the user can scroll
+        // through the options in the drawer if there isn't enough vertical
+        // space to fit everything.
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.redAccent,
+              ),
+              child: Text('Drawer Header'),
+            ),
+            ListTile(
+              title: const Text('Item 1'),
+              leading: const Icon(Icons.favorite),
+              onTap: () {
+                Navigator.pop(context);
+                // Update the state of the app.
+                // ...
+              },
+              hoverColor: Colors.redAccent,
+            ),
+            ListTile(
+              title: const Text('Item 2'),
+              leading: const Icon(Icons.comment),
+              onTap: () {
+                Navigator.pop(context);
+                // Update the state of the app.
+                // ...
+              },
+              hoverColor: Colors.redAccent,
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
