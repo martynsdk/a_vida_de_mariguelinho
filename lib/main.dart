@@ -43,8 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final List<String> imageList = [
-      "assets/mariguelinho1.jpg",
-      "assets/mariguelinho_main_picture.jpg"
+      'assets/mariguelinho1.jpg',
+      'assets/mariguelinho_main_picture.jpg'
     ];
 
     return Scaffold(
@@ -66,15 +66,19 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 alignment: Alignment.topCenter,
                 margin: const EdgeInsets.all(10.0),
-                child: Image.asset(
-                  'assets/mariguelinho_main_picture.jpg',
-                  fit: BoxFit.fill,
-                ),
+                child: Image.asset(imageList[1], scale: 1.0, fit: BoxFit.fill),
+
+              //  child: Image.asset(
+               //   'assets/mariguelinho_main_picture.jpg',
+                //  fit: BoxFit.fill,
+                //),
               ),
               Container(
                 height: MediaQuery.of(context).size.height,
                 margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
+
+
                     image: const DecorationImage(
                         image:
                             AssetImage('assets/mariguelinho_main_picture.jpg'),
@@ -100,12 +104,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(
-                              color: Colors.white,
+                              color: Colors.redAccent,
                             )),
                         //ClipRRect for image border radius
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(15),
-                          child: Image.network(
+                          child: Image.asset(
                             imageList[i],
                             width: 300,
                             fit: BoxFit.fill,
@@ -115,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       onTap: () {
                         var url = imageList[i];
-                        //print(url.toString());
+                        print(url.toString());
                       },
                     );
                   },
