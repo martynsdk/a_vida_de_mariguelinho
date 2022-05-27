@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(
-                              color: Colors.redAccent,
+                              color: Colors.white,
                             )),
                         //ClipRRect for image border radius
                         child: ClipRRect(
