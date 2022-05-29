@@ -84,8 +84,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 margin: const EdgeInsets.all(10.0),
                 child: Image.asset(imageList[0], scale: 1.0, fit: BoxFit.fill),
 
-              //  child: Image.asset(
-               //   'assets/mariguelinho_main_picture.jpg',
+                //  child: Image.asset(
+                //   'assets/mariguelinho_main_picture.jpg',
                 //  fit: BoxFit.fill,
                 //),
               ),
@@ -95,14 +95,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 300,
                 margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
-
-
                     image: DecorationImage(
                         image: AssetImage(imageList[1]),
                         scale: 1.0,
                         fit: BoxFit.fill),
-                    borderRadius: BorderRadius.circular(15)
-                ),
+                    borderRadius: BorderRadius.circular(15)),
               ),
               Container(
                 margin: EdgeInsets.all(15),
