@@ -45,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final List<String> imageList = [
       'assets/mariguelinho1.jpg',
       'assets/mariguelinho_main_picture.jpg'
+
     ];
 
     return Scaffold(
