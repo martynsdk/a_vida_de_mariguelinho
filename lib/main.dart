@@ -1,3 +1,5 @@
+import 'package:a_vida_de_mariguelinho/second_page.dart';
+import 'package:a_vida_de_mariguelinho/third_page.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -82,8 +84,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 margin: const EdgeInsets.all(10.0),
                 child: Image.asset(imageList[0], scale: 1.0, fit: BoxFit.fill),
 
-
-
               //  child: Image.asset(
                //   'assets/mariguelinho_main_picture.jpg',
                 //  fit: BoxFit.fill,
@@ -161,23 +161,41 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: BoxDecoration(
                 color: Colors.redAccent,
               ),
-              child: Text('Drawer Header'),
+              child: Text('Página Principal'),
             ),
             ListTile(
-              title: const Text('Item 1'),
+              title: const Text('Segunda Página'),
               leading: const Icon(Icons.favorite),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const SecondPage(title: 'Segunda Página');
+                }));
                 // Update the state of the app.
                 // ...
               },
               hoverColor: Colors.redAccent,
             ),
             ListTile(
-              title: const Text('Item 2'),
-              leading: const Icon(Icons.comment),
+              title: const Text('Terceira Página'),
+              leading: const Icon(Icons.add_box),
               onTap: () {
-                Navigator.pop(context);
+                //Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ThirdPage(title: 'Terceira Página');
+                }));
+                // Update the state of the app.
+                // ...
+              },
+              hoverColor: Colors.redAccent,
+            ),
+            ListTile(
+              title: const Text('Doe cripto'),
+              leading: const Icon(Icons.add_box),
+              onTap: () {
+                //Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ThirdPage(title: 'Doe cripto');
+                }));
                 // Update the state of the app.
                 // ...
               },
