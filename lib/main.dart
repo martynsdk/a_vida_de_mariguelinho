@@ -44,7 +44,21 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     final List<String> imageList = [
       'assets/mariguelinho1.jpg',
-      'assets/mariguelinho_main_picture.jpg'
+      'assets/mariguelinho_main_picture.jpg',
+      'assets/marighelinho2.jpg',
+      'assets/marighelinho3.jpg',
+      'assets/marighelinho4.jpg',
+      'assets/marighelinho5.jpg',
+      'assets/marighelinho6.jpg',
+      'assets/marighelinho7.jpg',
+      'assets/marighelinho8.jpg',
+      'assets/marighelinho9.jpg',
+      'assets/marighelinho10.jpg',
+      'assets/marighelinho11.jpg',
+      'assets/marighelinho12.jpg',
+      'assets/marighelinho13.jpg',
+      'assets/marighelinho14.jpg',
+      'assets/marighelinho15.jpg'
     ];
 
     return Scaffold(
@@ -114,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
                             imageList[i],
-                            width: MediaQuery.of(context).size.width,
+                            //width: MediaQuery.of(context).size.width,
                             fit: BoxFit.fill,
                             scale: 1.0,
                             //fit: BoxFit.contain
