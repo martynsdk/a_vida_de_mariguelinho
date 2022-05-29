@@ -68,22 +68,25 @@ class _MyHomePageState extends State<MyHomePage> {
                 margin: const EdgeInsets.all(10.0),
                 child: Image.asset(imageList[1], scale: 1.0, fit: BoxFit.fill),
 
+
               //  child: Image.asset(
                //   'assets/mariguelinho_main_picture.jpg',
                 //  fit: BoxFit.fill,
                 //),
               ),
               Container(
-                height: MediaQuery.of(context).size.height,
+                //height: MediaQuery.of(context).size.height,
+                height: 300,
                 margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
 
 
-                    image: const DecorationImage(
-                        image:
-                            AssetImage('assets/mariguelinho_main_picture.jpg'),
+                    image: DecorationImage(
+                        image: AssetImage(imageList[0]),
+                        scale: 1.0,
                         fit: BoxFit.fill),
-                    borderRadius: BorderRadius.circular(15)),
+                    borderRadius: BorderRadius.circular(15)
+                ),
               ),
               Container(
                 margin: EdgeInsets.all(15),
@@ -111,8 +114,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
                             imageList[i],
-                            width: 300,
+                            width: MediaQuery.of(context).size.width,
                             fit: BoxFit.fill,
+                            scale: 1.0,
                             //fit: BoxFit.contain
                           ),
                         ),
