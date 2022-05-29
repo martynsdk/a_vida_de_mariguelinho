@@ -1,3 +1,4 @@
+import 'package:a_vida_de_mariguelinho/second_page.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -164,10 +165,12 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('Drawer Header'),
             ),
             ListTile(
-              title: const Text('Item 1'),
+              title: const Text('Second Page'),
               leading: const Icon(Icons.favorite),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const SecondPage(title: 'SecondPage');
+                }));
                 // Update the state of the app.
                 // ...
               },
@@ -177,7 +180,10 @@ class _MyHomePageState extends State<MyHomePage> {
               title: const Text('Item 2'),
               leading: const Icon(Icons.comment),
               onTap: () {
-                Navigator.pop(context);
+                //Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const SecondPage(title: 'SecondPage');
+                }));
                 // Update the state of the app.
                 // ...
               },
