@@ -43,22 +43,22 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final List<String> imageList = [
-      'assets/mariguelinho1.jpg',
-      'assets/mariguelinho_main_picture.jpg',
-      'assets/marighelinho2.jpg',
-      'assets/marighelinho3.jpg',
-      'assets/marighelinho4.jpg',
-      'assets/marighelinho5.jpg',
-      'assets/marighelinho6.jpg',
-      'assets/marighelinho7.jpg',
-      'assets/marighelinho8.jpg',
-      'assets/marighelinho9.jpg',
-      'assets/marighelinho10.jpg',
-      'assets/marighelinho11.jpg',
-      'assets/marighelinho12.jpg',
-      'assets/marighelinho13.jpg',
-      'assets/marighelinho14.jpg',
-      'assets/marighelinho15.jpg'
+      'assets/images/mariguelinho_main_picture.jpg',
+      'assets/images/mariguelinho1.jpg',
+      'assets/images/marighelinho2.jpg',
+      'assets/images/marighelinho3.jpg',
+      'assets/images/marighelinho4.jpg',
+      'assets/images/marighelinho5.jpg',
+      'assets/images/marighelinho6.jpg',
+      'assets/images/marighelinho7.jpg',
+      'assets/images/marighelinho8.jpg',
+      'assets/images/marighelinho9.jpg',
+      'assets/images/marighelinho10.jpg',
+      'assets/images/marighelinho11.jpg',
+      'assets/images/marighelinho12.jpg',
+      'assets/images/marighelinho13.jpg',
+      'assets/images/marighelinho14.jpg',
+      'assets/images/marighelinho15.jpg'
     ];
 
     return Scaffold(
@@ -80,7 +80,8 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 alignment: Alignment.topCenter,
                 margin: const EdgeInsets.all(10.0),
-                child: Image.asset(imageList[1], scale: 1.0, fit: BoxFit.fill),
+                child: Image.asset(imageList[0], scale: 1.0, fit: BoxFit.fill),
+
 
 
               //  child: Image.asset(
@@ -90,13 +91,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Container(
                 //height: MediaQuery.of(context).size.height,
+                alignment: Alignment.topCenter,
                 height: 300,
                 margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
 
 
                     image: DecorationImage(
-                        image: AssetImage(imageList[0]),
+                        image: AssetImage(imageList[1]),
                         scale: 1.0,
                         fit: BoxFit.fill),
                     borderRadius: BorderRadius.circular(15)
