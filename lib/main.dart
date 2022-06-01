@@ -1,7 +1,9 @@
 import 'package:a_vida_de_mariguelinho/second_page.dart';
 import 'package:a_vida_de_mariguelinho/third_page.dart';
+import 'fourth_page.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+
 
 void main() {
   runApp(const MyApp());
