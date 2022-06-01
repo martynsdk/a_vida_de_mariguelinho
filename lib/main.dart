@@ -102,14 +102,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.circular(15)),
               ),
               Container(
-                margin: EdgeInsets.all(15),
+                margin: const EdgeInsets.all(15),
                 child: CarouselSlider.builder(
                   itemCount: imageList.length,
                   options: CarouselOptions(
                     enlargeCenterPage: true,
                     height: 300,
                     autoPlay: true,
-                    autoPlayInterval: Duration(seconds: 3),
+                    autoPlayInterval: const Duration(seconds: 3),
                     reverse: false,
                     aspectRatio: 5.0,
                   ),
@@ -136,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       onTap: () {
                         var url = imageList[i];
-                        print(url.toString());
+                        //print(url.toString());
                       },
                     );
                   },
@@ -191,7 +191,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 //Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const ThirdPage(title: 'Doe cripto');
+                  return const FourthPage(title: 'Doe cripto');
                 }));
                 // Update the state of the app.
                 // ...

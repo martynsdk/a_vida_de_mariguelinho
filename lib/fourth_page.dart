@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
 
-class ThirdPage extends StatelessWidget {
-  const ThirdPage({Key? key, required this.title}) : super(key: key);
+class FourthPage extends StatelessWidget {
+  const FourthPage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -17,22 +17,20 @@ class ThirdPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const Text(
-                'Quantized de vezes que o botão foi pressionado:',
+                'Quantidade de vezes que o botão foi pressionado:',
               ),
               Text(
-                'AAAA',
+                //'$_counter',
+                'A',
                 style: Theme.of(context).textTheme.headline4,
               ),
-              Container(
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const MyHomePage(title: 'A vida de Mariguelinho');
-                    }));
-                  },
-                  child: const Text('Voltar'),
-                ),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const MyHomePage(title: 'A vida de Mariguelinho');
+                  }));
+                },
+                child: const Text('Voltar'),
               ),
             ],
           ),
