@@ -77,6 +77,8 @@ flutter:
       - assets/images/marighelinho13.jpg
       - assets/images/marighelinho14.jpg
       - assets/images/marighelinho15.jpg
+      - assets/images/crypto_home/dogecoin_logo.png
+      - assets/images/crypto_home/shibainu_logo.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,6 +1,6 @@
 import 'package:a_vida_de_mariguelinho/second_page.dart';
 import 'package:a_vida_de_mariguelinho/third_page.dart';
-import 'fourth_page.dart';
+import 'crypto_home.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -189,11 +189,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ListTile(
               title: const Text('Doe cripto'),
-              leading: const Icon(Icons.add_box),
+              leading: const Icon(Icons.wallet_membership),
               onTap: () {
                 //Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const FourthPage(title: 'Doe cripto');
+                  return const CryptoHome(title: 'Doe cripto');
                 }));
                 // Update the state of the app.
                 // ...
