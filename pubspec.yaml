@@ -36,6 +36,9 @@ dependencies:
   carousel_slider: ^4.1.1
   cupertino_icons: ^1.0.2
   firebase_core: ^1.17.0
+  speech_to_text: ^5.5.0
+  avatar_glow: ^2.0.2
+  highlight_text: ^1.4.0
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,4 @@
-import 'package:a_vida_de_mariguelinho/second_page.dart';
+import 'package:a_vida_de_mariguelinho/about_name.dart';
 import 'package:a_vida_de_mariguelinho/third_page.dart';
 import 'crypto_home.dart';
 import 'package:flutter/material.dart';
@@ -163,11 +163,12 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('Página Principal'),
             ),
             ListTile(
-              title: const Text('Segunda Página'),
+              title: const Text('O Nome do Gato'),
               leading: const Icon(Icons.favorite),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const SecondPage(title: 'Segunda Página');
+                  //return const AboutName(title: 'O Nome do Gato');
+                  return AboutName();
                 }));
                 // Update the state of the app.
                 // ...
