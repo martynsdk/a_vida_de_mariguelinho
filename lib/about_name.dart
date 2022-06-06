@@ -5,6 +5,8 @@ import 'package:speech_to_text/speech_to_text.dart' as speechToText;
 
 
 class AboutName extends StatefulWidget {
+  const AboutName({Key? key}) : super(key: key);
+
   @override
   _AboutName createState() => _AboutName();
 }
@@ -17,10 +19,10 @@ class _AboutName extends State<AboutName> {
   final Map<String, HighlightedWord> highlightWords = {
     "flutter": HighlightedWord(
         textStyle:
-        TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold)),
+        const TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold)),
     "developer": HighlightedWord(
         textStyle:
-        TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold)),
+        const TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold)),
   };
 
   void listen() async {
@@ -57,28 +59,26 @@ class _AboutName extends State<AboutName> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sugestão de Nome"),
+        title: const Text("Sugestão de Nome"),
       ),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
-          Container(
-            child: Text(
-              "Confiança: ${(confidence * 100.0).toStringAsFixed(1)}%",
-              style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red),
-            ),
+          Text(
+            "Confiança: ${(confidence * 100.0).toStringAsFixed(1)}%",
+            style: const TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.red),
           ),
           Container(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: TextHighlight(
               text: textString,
               words: highlightWords,
-              textStyle: TextStyle(
+              textStyle: const TextStyle(
                   fontSize: 25.0,
                   color: Colors.black,
                   fontWeight: FontWeight.bold),
@@ -87,13 +87,12 @@ class _AboutName extends State<AboutName> {
         ],
       ),
 
-
       floatingActionButton: AvatarGlow(
         animate: isListen,
         glowColor: Colors.red,
         endRadius: 65.0,
-        duration: Duration(milliseconds: 2000),
-        repeatPauseDuration: Duration(milliseconds: 100),
+        duration: const Duration(milliseconds: 2000),
+        repeatPauseDuration: const Duration(milliseconds: 100),
         repeat: true,
         child: FloatingActionButton(
           child: Icon(isListen ? Icons.mic : Icons.mic_none),
