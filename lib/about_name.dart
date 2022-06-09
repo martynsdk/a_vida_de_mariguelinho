@@ -50,7 +50,7 @@ class _AboutNameState extends State<AboutName> {
 
   stt.SpeechToText _speech = stt.SpeechToText();
   bool _isListening = false;
-  String _text = 'Press the button and start speaking';
+  String _text = 'Fale um pouco mais';
   double _confidence = 1.0;
 
   @override
