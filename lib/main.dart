@@ -1,5 +1,5 @@
 import 'package:a_vida_de_mariguelinho/about_name.dart';
-import 'package:a_vida_de_mariguelinho/third_page.dart';
+import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
 import 'crypto_home.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -181,7 +181,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 //Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const ThirdPage(title: 'Terceira Página');
+                  return const MarighellosPictures(title: 'Terceira Página');
                 }));
                 // Update the state of the app.
                 // ...

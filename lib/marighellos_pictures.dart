@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 
 
-class ThirdPage extends StatelessWidget {
-  const ThirdPage({Key? key, required this.title}) : super(key: key);
+class MarighellosPictures extends StatelessWidget {
+  const MarighellosPictures({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
   Widget build(BuildContext context) {
-
-
 
     final List<String> imageList = [
       'assets/images/mariguelinho_main_picture.jpg',
@@ -29,6 +27,7 @@ class ThirdPage extends StatelessWidget {
       'assets/images/marighelinho14.jpg',
       'assets/images/marighelinho15.jpg'
     ];
+
 
     return Scaffold(
       appBar: AppBar(
@@ -61,6 +60,10 @@ class ThirdPage extends StatelessWidget {
       ),
     );
   }
+}
+
+class ImageList {
+
 }
 
 class ShowFullImage extends StatelessWidget {
