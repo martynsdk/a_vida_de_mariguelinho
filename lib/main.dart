@@ -1,5 +1,6 @@
 import 'package:a_vida_de_mariguelinho/about_name.dart';
 import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
+import 'package:avatar_glow/avatar_glow.dart';
 import 'crypto_home.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -65,9 +66,22 @@ class _MyHomePageState extends State<MyHomePage> {
       'assets/images/marighelinho15.jpg'
     ];
 
-    return Scaffold(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        textTheme:
+        const TextTheme(
+          headline1: TextStyle(color: Colors.redAccent),
+          headline2: TextStyle(color: Colors.redAccent),
+          bodyText2: TextStyle(color: Colors.redAccent),
+          subtitle1: TextStyle(color: Colors.redAccent),
+        ),
+      ),
+    home: Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -85,11 +99,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 alignment: Alignment.topCenter,
                 margin: const EdgeInsets.all(10.0),
                 child: Image.asset(imageList[0], scale: 1.0, fit: BoxFit.fill),
-
-                //  child: Image.asset(
-                //   'assets/mariguelinho_main_picture.jpg',
-                //  fit: BoxFit.fill,
-                //),
               ),
               Container(
                 //height: MediaQuery.of(context).size.height,
@@ -204,11 +213,26 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Incrementa',
-        child: const Icon(Icons.add),
+
+      floatingActionButton: AvatarGlow(
+        glowColor: Theme.of(context).primaryColor,
+        endRadius: 75.0,
+        duration: const Duration(milliseconds: 3000),
+        repeatPauseDuration: const Duration(milliseconds: 100),
+        repeat: true,
+        child: FloatingActionButton(
+          onPressed: _incrementCounter,
+          tooltip: "As flores são bonitas em qualquer lugar do mundo, muita gente tem forma mas não tem conteúdo.",
+          child: const Icon(Icons.add),
+        ),
       ),
+
+      //floatingActionButton: FloatingActionButton(
+       // onPressed: _incrementCounter,
+        //tooltip: 'Incrementa',
+        //child: const Icon(Icons.add),
+      //),
+    ),
     );
   }
 }

@@ -10,6 +10,7 @@ class AboutName extends StatefulWidget {
 }
 
 class _AboutNameState extends State<AboutName> {
+
   final Map<String, HighlightedWord> _highlights = {
     'flutter': HighlightedWord(
       onTap: () => print('flutter'),
@@ -61,7 +62,20 @@ class _AboutNameState extends State<AboutName> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        textTheme:
+        const TextTheme(
+          headline1: TextStyle(color: Colors.redAccent),
+          headline2: TextStyle(color: Colors.redAccent),
+          bodyText2: TextStyle(color: Colors.redAccent),
+          subtitle1: TextStyle(color: Colors.redAccent),
+        ),
+      ),
+
+    home: Scaffold(
       appBar: AppBar(
         title: Text('Confidence: ${(_confidence * 100.0).toStringAsFixed(1)}%'),
       ),
@@ -93,6 +107,7 @@ class _AboutNameState extends State<AboutName> {
           ),
         ),
       ),
+    ),
     );
   }
 
