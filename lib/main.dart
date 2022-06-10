@@ -176,8 +176,8 @@ class _MyHomePageState extends State<MyHomePage> {
               hoverColor: Colors.redAccent,
             ),
             ListTile(
-              title: const Text('Terceira Página'),
-              leading: const Icon(Icons.add_box),
+              title: const Text('Fotinhas'),
+              leading: const Icon(Icons.photo_album_rounded),
               onTap: () {
                 //Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
