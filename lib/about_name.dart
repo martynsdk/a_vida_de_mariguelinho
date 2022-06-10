@@ -70,7 +70,7 @@ class _AboutNameState extends State<AboutName> {
         animate: _isListening,
         glowColor: Theme.of(context).primaryColor,
         endRadius: 75.0,
-        duration: const Duration(milliseconds: 2000),
+        duration: const Duration(milliseconds: 3000),
         repeatPauseDuration: const Duration(milliseconds: 100),
         repeat: true,
         child: FloatingActionButton(
@@ -105,11 +105,13 @@ class _AboutNameState extends State<AboutName> {
       if (available) {
         setState(() => _isListening = true);
         _speech.listen(
+          listenFor: const Duration(seconds: 5),
           onResult: (val) => setState(() {
             _text = val.recognizedWords;
             if (val.hasConfidenceRating && val.confidence > 0) {
               _confidence = val.confidence;
             }
+            setState(() => _isListening = false);
           }),
         );
       }
