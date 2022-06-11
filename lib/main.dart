@@ -124,6 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     reverse: false,
                     aspectRatio: 5.0,
                   ),
+                  //a
                   itemBuilder: (context, i, id) {
                     //for onTap to redirect to another screen
                     return GestureDetector(
