@@ -1,6 +1,6 @@
 # a_vida_de_mariguelinho
 
-Apenas um simples aplicativo.
+Apenas um simples aplicativo..
 
 ## Getting Started
 
