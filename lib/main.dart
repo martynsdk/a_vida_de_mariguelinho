@@ -1,10 +1,9 @@
 import 'package:a_vida_de_mariguelinho/talk_to_the_cat.dart';
 import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
 import 'package:avatar_glow/avatar_glow.dart';
-import 'crypto_home.dart';
+import 'crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -66,6 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
       'assets/images/marighelinho14.jpg',
       'assets/images/marighelinho15.jpg'
     ];
+
+
 
 
     return Scaffold(
@@ -135,7 +136,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       onTap: () {
                         var url = imageList[i];
-                        //print(url.toString());
                       },
                     );
                   },
@@ -145,7 +145,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      drawer: Drawer(
+
+
+
+
+
+        drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
         // space to fit everything.
@@ -165,7 +170,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   //return const AboutName(title: 'O Nome do Gato');
-                  return TalkToTheCat();
+                  return const TalkToTheCat();
                 }));
                 // Update the state of the app.
                 // ...

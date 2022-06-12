@@ -25,38 +25,10 @@ class TalkToTheCat extends StatefulWidget {
 class _TalkToTheCatState extends State<TalkToTheCat> {
 
   final Map<String, HighlightedWord> _highlights = {
-    'flutter': HighlightedWord(
+    'Marighella': HighlightedWord(
       onTap: () => print('Marighella'),
       textStyle: const TextStyle(
         color: Colors.blue,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    'voice': HighlightedWord(
-      onTap: () => print('voice'),
-      textStyle: const TextStyle(
-        color: Colors.green,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    'subscribe': HighlightedWord(
-      onTap: () => print('subscribe'),
-      textStyle: const TextStyle(
-        color: Colors.red,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    'like': HighlightedWord(
-      onTap: () => print('like'),
-      textStyle: const TextStyle(
-        color: Colors.redAccent,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    'comment': HighlightedWord(
-      onTap: () => print('comment'),
-      textStyle: const TextStyle(
-        color: Colors.green,
         fontWeight: FontWeight.bold,
       ),
     ),
