@@ -22,13 +22,12 @@ class CryptoHome extends StatefulWidget {
       home: const CryptoHome(title: 'Doe cripto'),
     );
   }
+
   @override
   _CryptoHome createState() => _CryptoHome();
 }
 
 class _CryptoHome extends State<CryptoHome> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,38 +37,238 @@ class _CryptoHome extends State<CryptoHome> {
         backgroundColor: Theme.of(context).primaryColor,
       ),
       body: SingleChildScrollView(
-        reverse: true,
-        child: Card(
+        padding: const EdgeInsets.all(32.0),
+        child: Center(
           child: Column(
-            mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              const ListTile(
-                leading: Icon(Icons.album),
-                title: Text('The Enchanted Nightingale'),
-                subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(Icons.album),
+                      title: Text('The Enchanted Nightingale'),
+                      subtitle:
+                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          child: const Text('BUY TICKETS'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        TextButton(
+                          child: const Text('LISTEN'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  TextButton(
-                    child: const Text('BUY TICKETS'),
-                    onPressed: () {/* ... */},
-                  ),
-                  const SizedBox(width: 8),
-                  TextButton(
-                    child: const Text('LISTEN'),
-                    onPressed: () {/* ... */},
-                  ),
-                  const SizedBox(width: 8),
-                ],
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(Icons.album),
+                      title: Text('The Enchanted Nightingale'),
+                      subtitle:
+                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          child: const Text('BUY TICKETS'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        TextButton(
+                          child: const Text('LISTEN'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
+                  ],
+                ),
               ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(Icons.album),
+                      title: Text('The Enchanted Nightingale'),
+                      subtitle:
+                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          child: const Text('BUY TICKETS'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        TextButton(
+                          child: const Text('LISTEN'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(Icons.album),
+                      title: Text('The Enchanted Nightingale'),
+                      subtitle:
+                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          child: const Text('BUY TICKETS'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        TextButton(
+                          child: const Text('LISTEN'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(Icons.album),
+                      title: Text('The Enchanted Nightingale'),
+                      subtitle:
+                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          child: const Text('BUY TICKETS'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        TextButton(
+                          child: const Text('LISTEN'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(Icons.album),
+                      title: Text('The Enchanted Nightingale'),
+                      subtitle:
+                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          child: const Text('BUY TICKETS'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        TextButton(
+                          child: const Text('LISTEN'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(Icons.album),
+                      title: Text('The Enchanted Nightingale'),
+                      subtitle:
+                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          child: const Text('BUY TICKETS'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        TextButton(
+                          child: const Text('LISTEN'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
-
-
         ),
       ),
     );
-
   }
 }
