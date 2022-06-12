@@ -15,12 +15,20 @@ class CryptoHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //HERE
-    return Scaffold(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
+      ),
+    home: Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).primaryColor,
         title: Text(title),
       ),
 
 
+    ),
     );
 
   }

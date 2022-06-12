@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'A vida de Mariguelinho',
       theme: ThemeData(
+        primaryColor: Colors.redAccent,
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
       ),
@@ -69,7 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        useMaterial3: true,
+        primaryColor: Colors.redAccent,
         textTheme:
         const TextTheme(
           headline1: TextStyle(color: Colors.redAccent),
@@ -80,6 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     home: Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).primaryColor,
         title: Text(widget.title),
         centerTitle: true,
       ),
@@ -132,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(
-                              color: Colors.white,
+                              color: Colors.redAccent,
                             )),
                         //ClipRRect for image border radius
                         child: ClipRRect(
@@ -170,10 +173,10 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: BoxDecoration(
                 color: Colors.redAccent,
               ),
-              child: Text('Página Principal'),
+              child: Text('Home'),
             ),
             ListTile(
-              title: const Text('O Nome do Gato'),
+              title: const Text('Fale com o Gato'),
               leading: const Icon(Icons.favorite),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -191,7 +194,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 //Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const MarighellosPictures(title: 'Terceira Página');
+                  return const MarighellosPictures(title: 'Fotinhas');
                 }));
                 // Update the state of the app.
                 // ...
@@ -222,17 +225,12 @@ class _MyHomePageState extends State<MyHomePage> {
         repeatPauseDuration: const Duration(milliseconds: 100),
         repeat: true,
         child: FloatingActionButton(
+          backgroundColor: Theme.of(context).primaryColor,
           onPressed: _incrementCounter,
           tooltip: "As flores são bonitas em qualquer lugar do mundo, muita gente tem forma mas não tem conteúdo.",
           child: const Icon(Icons.add),
         ),
       ),
-
-      //floatingActionButton: FloatingActionButton(
-       // onPressed: _incrementCounter,
-        //tooltip: 'Incrementa',
-        //child: const Icon(Icons.add),
-      //),
     ),
     );
   }

@@ -65,6 +65,7 @@ class _AboutNameState extends State<AboutName> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.red,
         textTheme:
         const TextTheme(
@@ -77,6 +78,7 @@ class _AboutNameState extends State<AboutName> {
 
     home: Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).primaryColor,
         title: Text('Confidence: ${(_confidence * 100.0).toStringAsFixed(1)}%'),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
