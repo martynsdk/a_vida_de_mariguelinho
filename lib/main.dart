@@ -1,4 +1,4 @@
-import 'package:a_vida_de_mariguelinho/about_name.dart';
+import 'package:a_vida_de_mariguelinho/talk_to_the_cat.dart';
 import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'crypto_home.dart';
@@ -67,20 +67,8 @@ class _MyHomePageState extends State<MyHomePage> {
       'assets/images/marighelinho15.jpg'
     ];
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        primaryColor: Colors.redAccent,
-        textTheme:
-        const TextTheme(
-          headline1: TextStyle(color: Colors.redAccent),
-          headline2: TextStyle(color: Colors.redAccent),
-          bodyText2: TextStyle(color: Colors.redAccent),
-          subtitle1: TextStyle(color: Colors.redAccent),
-        ),
-      ),
-    home: Scaffold(
+
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         title: Text(widget.title),
@@ -98,11 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 '$_counter',
                 style: Theme.of(context).textTheme.headline4,
               ),
-              Container(
-                alignment: Alignment.topCenter,
-                margin: const EdgeInsets.all(10.0),
-                child: Image.asset(imageList[0], scale: 1.0, fit: BoxFit.fill),
-              ),
+
               Container(
                 //height: MediaQuery.of(context).size.height,
                 alignment: Alignment.topCenter,
@@ -181,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   //return const AboutName(title: 'O Nome do Gato');
-                  return AboutName();
+                  return TalkToTheCat();
                 }));
                 // Update the state of the app.
                 // ...
@@ -230,7 +214,6 @@ class _MyHomePageState extends State<MyHomePage> {
           child: const Icon(Icons.add),
         ),
       ),
-    ),
     );
   }
 }

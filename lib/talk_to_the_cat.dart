@@ -4,16 +4,29 @@ import 'package:highlight_text/highlight_text.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 
-class AboutName extends StatefulWidget {
+class TalkToTheCat extends StatefulWidget {
+  const TalkToTheCat({Key? key}) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Colors.redAccent,
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
+      ),
+      home: const TalkToTheCat(),
+    );
+  }
   @override
-  _AboutNameState createState() => _AboutNameState();
+  _TalkToTheCatState createState() => _TalkToTheCatState();
 }
 
-class _AboutNameState extends State<AboutName> {
+class _TalkToTheCatState extends State<TalkToTheCat> {
 
   final Map<String, HighlightedWord> _highlights = {
     'flutter': HighlightedWord(
-      onTap: () => print('flutter'),
+      onTap: () => print('Marighella'),
       textStyle: const TextStyle(
         color: Colors.blue,
         fontWeight: FontWeight.bold,
@@ -62,24 +75,11 @@ class _AboutNameState extends State<AboutName> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        primarySwatch: Colors.red,
-        textTheme:
-        const TextTheme(
-          headline1: TextStyle(color: Colors.redAccent),
-          headline2: TextStyle(color: Colors.redAccent),
-          bodyText2: TextStyle(color: Colors.redAccent),
-          subtitle1: TextStyle(color: Colors.redAccent),
-        ),
-      ),
-
-    home: Scaffold(
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         title: Text('Confidence: ${(_confidence * 100.0).toStringAsFixed(1)}%'),
+        centerTitle: true,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: AvatarGlow(
@@ -109,7 +109,6 @@ class _AboutNameState extends State<AboutName> {
           ),
         ),
       ),
-    ),
     );
   }
 

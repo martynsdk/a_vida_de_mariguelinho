@@ -7,28 +7,36 @@ final List<String> cryptoImageList = [
   'assets/images/crypto_home/shibainu_logo.png'
 ];
 
-
-class CryptoHome extends StatelessWidget {
+class CryptoHome extends StatefulWidget {
   const CryptoHome({Key? key, required this.title}) : super(key: key);
   final String title;
 
-  @override
   Widget build(BuildContext context) {
-    //HERE
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primaryColor: Colors.redAccent,
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
       ),
-    home: Scaffold(
+      home: const CryptoHome(title: 'Doe cripto'),
+    );
+  }
+  @override
+  _CryptoHome createState() => _CryptoHome();
+}
+
+class _CryptoHome extends State<CryptoHome> {
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
+        title: Text(widget.title),
+        centerTitle: true,
         backgroundColor: Theme.of(context).primaryColor,
-        title: Text(title),
       ),
-
-
-    ),
     );
 
   }

@@ -2,9 +2,29 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 
 
-class MarighellosPictures extends StatelessWidget {
+class MarighellosPictures extends StatefulWidget {
   const MarighellosPictures({Key? key, required this.title}) : super(key: key);
   final String title;
+
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Colors.redAccent,
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
+      ),
+      home: const MarighellosPictures(title: 'Fotinhos do Marighella',),
+    );
+  }
+
+
+  @override
+  _MarighellosPictures createState() => _MarighellosPictures();
+}
+
+class _MarighellosPictures extends State<MarighellosPictures> {
+
 
   @override
   Widget build(BuildContext context) {
@@ -29,16 +49,11 @@ class MarighellosPictures extends StatelessWidget {
     ];
 
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
-      ),
-      home: Scaffold(
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
-        title: Text(title),
+        title: Text(widget.title),
+        centerTitle: true,
       ),
 
       body: Center(
@@ -65,13 +80,8 @@ class MarighellosPictures extends StatelessWidget {
           },
         ),
       ),
-    ),
     );
   }
-}
-
-class ImageList {
-
 }
 
 class ShowFullImage extends StatelessWidget {
