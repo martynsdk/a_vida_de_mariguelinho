@@ -205,7 +205,6 @@ class _MyHomePageState extends State<MyHomePage> {
               title: const Text('Doe cripto'),
               leading: const Icon(Icons.wallet_membership),
               onTap: () {
-                //Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const CryptoHome(title: 'Doe cripto');
                 }));
