@@ -63,7 +63,46 @@ class _MyHomePageState extends State<MyHomePage> {
       'assets/images/marighelinho12.jpg',
       'assets/images/marighelinho13.jpg',
       'assets/images/marighelinho14.jpg',
-      'assets/images/marighelinho15.jpg'
+      'assets/images/marighelinho15.jpg',
+      'assets/images/marighelinho16.jpg',
+      'assets/images/marighelinho17.jpg',
+      'assets/images/marighelinho18.jpg',
+      'assets/images/marighelinho19.jpg',
+      'assets/images/marighelinho20.jpg',
+      'assets/images/marighelinho21.jpg',
+      'assets/images/marighelinho22.jpg',
+      'assets/images/marighelinho23.jpg',
+      'assets/images/marighelinho24.jpg',
+      'assets/images/marighelinho25.jpg',
+      'assets/images/marighelinho26.jpg',
+      'assets/images/marighelinho27.jpg',
+      'assets/images/marighelinho28.jpg',
+      'assets/images/marighelinho29.jpg',
+      'assets/images/marighelinho30.jpg',
+      'assets/images/marighelinho31.jpg',
+      'assets/images/marighelinho32.jpg',
+      'assets/images/marighelinho33.jpg',
+      'assets/images/marighelinho34.jpg',
+      'assets/images/marighelinho35.jpg',
+      'assets/images/marighelinho36.jpg',
+      'assets/images/marighelinho37.jpg',
+      'assets/images/marighelinho38.jpg',
+      'assets/images/marighelinho39.jpg',
+      'assets/images/marighelinho40.jpg',
+      'assets/images/marighelinho41.jpg',
+      'assets/images/marighelinho42.jpg',
+      'assets/images/marighelinho43.jpg',
+      'assets/images/marighelinho44.jpg',
+      'assets/images/marighelinho45.jpg',
+      'assets/images/marighelinho46.jpg',
+      'assets/images/marighelinho47.jpg',
+      'assets/images/marighelinho48.jpg',
+      'assets/images/marighelinho49.jpg',
+      'assets/images/marighelinho50.jpg',
+      'assets/images/marighelinho51.jpg',
+      'assets/images/marighelinho52.jpg',
+      'assets/images/marighelinho53.jpg',
+
     ];
 
 
@@ -80,37 +119,86 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Text(
-                'Quantidade de vezes que o botão foi pressionado:',
-              ),
-              Text(
-                '$_counter',
-                style: Theme.of(context).textTheme.headline4,
+
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Image.asset(imageList[0], fit: BoxFit.fill),
+                    const ListTile(
+                      leading: Icon(Icons.album),
+                      title: Text('O gato mais doidão'),
+                      subtitle:
+                      Text('Incríveis peripécias e muito sono.'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          child: const Text('CLIQUE AQUI PARA NADA'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        TextButton(
+                          child: const Text('AQUI TAMBÉM'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
+                  ],
+                ),
               ),
 
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const SizedBox(width: 8),
+                      const Text(
+                        'Quantidade de vezes que o botão foi pressionado:',
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        '$_counter',
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
+                      const SizedBox(width: 8),
+                    ],
+                ),
+              ),
+
+              //HOME
+
+
               Container(
-                //height: MediaQuery.of(context).size.height,
+                height: MediaQuery.of(context).size.height,
                 alignment: Alignment.topCenter,
-                height: 300,
+                //height: 300,
                 margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(imageList[1]),
-                        scale: 1.0,
-                        fit: BoxFit.fill),
+                        fit: BoxFit.fitHeight),
                     borderRadius: BorderRadius.circular(15)),
               ),
+
+
               Container(
                 margin: const EdgeInsets.all(15),
                 child: CarouselSlider.builder(
                   itemCount: imageList.length,
                   options: CarouselOptions(
                     enlargeCenterPage: true,
-                    height: 300,
+                    //height: 300,
                     autoPlay: true,
                     autoPlayInterval: const Duration(seconds: 3),
                     reverse: false,
-                    aspectRatio: 5.0,
+                    aspectRatio: 2.0,
                   ),
                   //abb
                   itemBuilder: (context, i, id) {
@@ -118,19 +206,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     return GestureDetector(
                       child: Container(
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(
-                              color: Colors.redAccent,
-                            )),
+                            borderRadius: BorderRadius.circular(15)),
                         //ClipRRect for image border radius
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
                             imageList[i],
-                            //width: MediaQuery.of(context).size.width,
-                            fit: BoxFit.fill,
-                            scale: 1.0,
-                            //fit: BoxFit.contain
+                            fit: BoxFit.fitHeight,
+                            scale: 1.0
                           ),
                         ),
                       ),
@@ -141,6 +224,40 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 ),
               ),
+
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(Icons.album),
+                      title: Text('Mariguelinho'),
+                      subtitle:
+                      Text('O que você faria se soubesse que não iria falhar?'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          child: const Text('NADA'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        TextButton(
+                          child: const Text('ABSOLUTAMENTE NADA'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
             ],
           ),
         ),
@@ -205,6 +322,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+
+
 
       floatingActionButton: AvatarGlow(
         glowColor: Theme.of(context).primaryColor,

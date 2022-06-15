@@ -47,22 +47,22 @@ class _CryptoHome extends State<CryptoHome> {
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(Icons.album),
-                      title: Text('The Enchanted Nightingale'),
+                      title: Text('Doe Bitcoins para o Mariguelinho'),
                       subtitle:
-                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                          Text('Em breve o endereço da carteira.'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         TextButton(
-                          child: const Text('BUY TICKETS'),
+                          child: const Text('DOAR PARA RAÇÃO'),
                           onPressed: () {
                             /* ... */
                           },
                         ),
                         const SizedBox(width: 8),
                         TextButton(
-                          child: const Text('LISTEN'),
+                          child: const Text('SUPÉRFULOS'),
                           onPressed: () {
                             /* ... */
                           },
@@ -79,22 +79,22 @@ class _CryptoHome extends State<CryptoHome> {
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(Icons.album),
-                      title: Text('The Enchanted Nightingale'),
+                      title: Text('Doe Ethereum para o Mariguelinho'),
                       subtitle:
-                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                          Text('Em breve o endereço da carteira.'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         TextButton(
-                          child: const Text('BUY TICKETS'),
+                          child: const Text('DOAR PARA RAÇÃO'),
                           onPressed: () {
                             /* ... */
                           },
                         ),
                         const SizedBox(width: 8),
                         TextButton(
-                          child: const Text('LISTEN'),
+                          child: const Text('SUPÉRFULOS'),
                           onPressed: () {
                             /* ... */
                           },
@@ -111,22 +111,22 @@ class _CryptoHome extends State<CryptoHome> {
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(Icons.album),
-                      title: Text('The Enchanted Nightingale'),
+                      title: Text('Doe DogeCoin para o Mariguelinho'),
                       subtitle:
-                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                          Text('Em breve o endereço da carteira.'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         TextButton(
-                          child: const Text('BUY TICKETS'),
+                          child: const Text('DOAR PARA RAÇÃO'),
                           onPressed: () {
                             /* ... */
                           },
                         ),
                         const SizedBox(width: 8),
                         TextButton(
-                          child: const Text('LISTEN'),
+                          child: const Text('SUPÉRFULOS'),
                           onPressed: () {
                             /* ... */
                           },
@@ -143,22 +143,22 @@ class _CryptoHome extends State<CryptoHome> {
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(Icons.album),
-                      title: Text('The Enchanted Nightingale'),
+                      title: Text('Doe ShibaInu para o Mariguelinho'),
                       subtitle:
-                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                          Text('Em breve o endereço da carteira.'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         TextButton(
-                          child: const Text('BUY TICKETS'),
+                          child: const Text('DOAR PARA RAÇÃO'),
                           onPressed: () {
                             /* ... */
                           },
                         ),
                         const SizedBox(width: 8),
                         TextButton(
-                          child: const Text('LISTEN'),
+                          child: const Text('SUPÉRFULOS'),
                           onPressed: () {
                             /* ... */
                           },
@@ -175,22 +175,22 @@ class _CryptoHome extends State<CryptoHome> {
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(Icons.album),
-                      title: Text('The Enchanted Nightingale'),
+                      title: Text('Doe USD Coin para o Mariguelinho'),
                       subtitle:
-                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                          Text('Em breve o endereço da carteira.'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         TextButton(
-                          child: const Text('BUY TICKETS'),
+                          child: const Text('DOAR PARA RAÇÃO'),
                           onPressed: () {
                             /* ... */
                           },
                         ),
                         const SizedBox(width: 8),
                         TextButton(
-                          child: const Text('LISTEN'),
+                          child: const Text('SUPÉRFULOS'),
                           onPressed: () {
                             /* ... */
                           },
@@ -207,22 +207,22 @@ class _CryptoHome extends State<CryptoHome> {
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(Icons.album),
-                      title: Text('The Enchanted Nightingale'),
+                      title: Text('Doe Cardano para o Mariguelinho'),
                       subtitle:
-                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                          Text('Em breve o endereço da carteira.'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         TextButton(
-                          child: const Text('BUY TICKETS'),
+                          child: const Text('DOAR PARA RAÇÃO'),
                           onPressed: () {
                             /* ... */
                           },
                         ),
                         const SizedBox(width: 8),
                         TextButton(
-                          child: const Text('LISTEN'),
+                          child: const Text('SUPÉRFULOS'),
                           onPressed: () {
                             /* ... */
                           },
@@ -239,22 +239,22 @@ class _CryptoHome extends State<CryptoHome> {
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(Icons.album),
-                      title: Text('The Enchanted Nightingale'),
+                      title: Text('Faça um Pix para o Mariguelinho.'),
                       subtitle:
-                          Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                          Text('Em breve o endereço da carteira.'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         TextButton(
-                          child: const Text('BUY TICKETS'),
+                          child: const Text('DOAR PARA RAÇÃO'),
                           onPressed: () {
                             /* ... */
                           },
                         ),
                         const SizedBox(width: 8),
                         TextButton(
-                          child: const Text('LISTEN'),
+                          child: const Text('SUPÉRFULOS'),
                           onPressed: () {
                             /* ... */
                           },
