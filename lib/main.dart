@@ -102,7 +102,6 @@ class _MyHomePageState extends State<MyHomePage> {
       'assets/images/marighelinho51.jpg',
       'assets/images/marighelinho52.jpg',
       'assets/images/marighelinho53.jpg',
-
     ];
 
 
