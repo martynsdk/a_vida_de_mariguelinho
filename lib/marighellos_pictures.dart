@@ -55,9 +55,8 @@ class _MarighellosPictures extends State<MarighellosPictures> {
         title: Text(widget.title),
         centerTitle: true,
       ),
-
+      //HOME
       body: Center(
-
         child: GridView.builder(
           itemCount: imageList.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -67,34 +66,29 @@ class _MarighellosPictures extends State<MarighellosPictures> {
           ),
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
+              child: Image.asset(imageList[index], fit: BoxFit.cover),
               onTap: () async {
                 await showDialog(
                   context: context,
                   builder: (_) {
-                    return ShowFullImage();
+                    return Dialog(
+                      child: GestureDetector(
+                        child: Hero(
+                          tag: 'imageHero',
+                          child: Image.asset(imageList[index], fit: BoxFit.cover),
+                        ),
+                        onTap: () => Navigator.pop(
+                          context,
+                        ),
+                      ),
+                    );
                   },
                 );
               },
-                child: Image.asset(imageList[index], fit: BoxFit.cover),
             );
           },
         ),
       ),
-    );
-  }
-}
-
-class ShowFullImage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Dialog(
-        child: GestureDetector(
-          //child: Image.asset('assets/images/mariguelinho_main_picture.jpg', fit: BoxFit.cover),
-          child: Image.asset('assets/images/mariguelinho_main_picture.jpg', fit: BoxFit.cover),
-          onTap: () => Navigator.pop(
-            context,
-          ),
-        ),
     );
   }
 }
