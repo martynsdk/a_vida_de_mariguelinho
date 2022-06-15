@@ -160,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: <Widget>[
                       const SizedBox(width: 8),
                       const Text(
-                        'Quantidade de vezes que o botão foi pressionado:',
+                        'Quantidade de vezes que o botão + foi pressionado:',
                       ),
                       const SizedBox(width: 8),
                       Text(
