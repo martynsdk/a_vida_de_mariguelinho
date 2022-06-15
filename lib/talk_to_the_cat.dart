@@ -2,6 +2,7 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
+import 'package:assets_audio_player/assets_audio_player.dart';
 
 
 class TalkToTheCat extends StatefulWidget {
@@ -44,6 +45,8 @@ class _TalkToTheCatState extends State<TalkToTheCat> {
     super.initState();
     _speech = stt.SpeechToText();
   }
+
+  AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
 
   @override
   Widget build(BuildContext context) {
@@ -95,11 +98,9 @@ class _TalkToTheCatState extends State<TalkToTheCat> {
         _speech.listen(
           listenFor: const Duration(seconds: 5),
           onResult: (val) => setState(() {
-            _text = val.recognizedWords;
-            if (val.hasConfidenceRating && val.confidence > 0) {
-              _confidence = val.confidence;
-            }
-            setState(() => _isListening = false);
+            _text = '${val.recognizedWords}?';
+            if (val.hasConfidenceRating && val.confidence > 0) {_confidence = val.confidence;}
+            audioPlayer.open(Audio('assets/audio/meow1.mp3'));
           }),
         );
       }
@@ -107,5 +108,9 @@ class _TalkToTheCatState extends State<TalkToTheCat> {
       setState(() => _isListening = false);
       _speech.stop();
     }
+
   }
+
+
+
 }
