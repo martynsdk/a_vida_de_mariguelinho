@@ -95,9 +95,7 @@ class _TalkToTheCatState extends State<TalkToTheCat> {
   }
 
   void _listen() async {
-
     int a = randomGen(1, 2);
-
     if (!_isListening) {
       bool available = await _speech.initialize(
         onStatus: (val) => print('onStatus: $val'),
