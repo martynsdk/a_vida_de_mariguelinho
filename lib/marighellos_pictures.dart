@@ -75,7 +75,7 @@ class _MarighellosPictures extends State<MarighellosPictures> {
                       child: GestureDetector(
                         child: Hero(
                           tag: 'imageHero',
-                          child: Image.asset(imageList[index], fit: BoxFit.cover),
+                          child: Image.asset(imageList[index], fit: BoxFit.fitHeight),
                         ),
                         onTap: () => Navigator.pop(
                           context,

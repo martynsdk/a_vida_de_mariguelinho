@@ -80,37 +80,86 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Text(
-                'Quantidade de vezes que o botão foi pressionado:',
-              ),
-              Text(
-                '$_counter',
-                style: Theme.of(context).textTheme.headline4,
+
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Image.asset(imageList[0], fit: BoxFit.fill),
+                    const ListTile(
+                      leading: Icon(Icons.album),
+                      title: Text('O gato mais doidão'),
+                      subtitle:
+                      Text('Incríveis peripécias e muito sono.'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          child: const Text('CLIQUE AQUI PARA NADA'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        TextButton(
+                          child: const Text('AQUI TAMBÉM'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
+                  ],
+                ),
               ),
 
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const SizedBox(width: 8),
+                      const Text(
+                        'Quantidade de vezes que o botão foi pressionado:',
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        '$_counter',
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
+                      const SizedBox(width: 8),
+                    ],
+                ),
+              ),
+
+              //HOME
+
+
               Container(
-                //height: MediaQuery.of(context).size.height,
+                height: MediaQuery.of(context).size.height,
                 alignment: Alignment.topCenter,
-                height: 300,
+                //height: 300,
                 margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(imageList[1]),
-                        scale: 1.0,
-                        fit: BoxFit.fill),
+                        fit: BoxFit.fitHeight),
                     borderRadius: BorderRadius.circular(15)),
               ),
+
+
               Container(
                 margin: const EdgeInsets.all(15),
                 child: CarouselSlider.builder(
                   itemCount: imageList.length,
                   options: CarouselOptions(
                     enlargeCenterPage: true,
-                    height: 300,
+                    //height: 300,
                     autoPlay: true,
                     autoPlayInterval: const Duration(seconds: 3),
                     reverse: false,
-                    aspectRatio: 5.0,
+                    aspectRatio: 2.0,
                   ),
                   //abb
                   itemBuilder: (context, i, id) {
@@ -118,19 +167,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     return GestureDetector(
                       child: Container(
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(
-                              color: Colors.redAccent,
-                            )),
+                            borderRadius: BorderRadius.circular(15)),
                         //ClipRRect for image border radius
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
                             imageList[i],
-                            //width: MediaQuery.of(context).size.width,
-                            fit: BoxFit.fill,
-                            scale: 1.0,
-                            //fit: BoxFit.contain
+                            fit: BoxFit.fitHeight,
+                            scale: 1.0
                           ),
                         ),
                       ),
@@ -141,6 +185,40 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 ),
               ),
+
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(Icons.album),
+                      title: Text('Mariguelinho'),
+                      subtitle:
+                      Text('O que você faria se soubesse que não iria falhar?'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        TextButton(
+                          child: const Text('NADA'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        TextButton(
+                          child: const Text('ABSOLUTAMENTE NADA'),
+                          onPressed: () {
+                            /* ... */
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
             ],
           ),
         ),
@@ -205,6 +283,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+
+
 
       floatingActionButton: AvatarGlow(
         glowColor: Theme.of(context).primaryColor,
