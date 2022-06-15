@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:assets_audio_player/assets_audio_player.dart';
+import 'dart:math';
 
 
 class TalkToTheCat extends StatefulWidget {
@@ -48,6 +49,12 @@ class _TalkToTheCatState extends State<TalkToTheCat> {
 
   AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
 
+  randomGen(min, max) {
+    var x = Random().nextInt(max) + min;
+    return x.floor();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,6 +95,9 @@ class _TalkToTheCatState extends State<TalkToTheCat> {
   }
 
   void _listen() async {
+
+    int a = randomGen(1, 2);
+
     if (!_isListening) {
       bool available = await _speech.initialize(
         onStatus: (val) => print('onStatus: $val'),
@@ -100,7 +110,7 @@ class _TalkToTheCatState extends State<TalkToTheCat> {
           onResult: (val) => setState(() {
             _text = '${val.recognizedWords}?';
             if (val.hasConfidenceRating && val.confidence > 0) {_confidence = val.confidence;}
-            audioPlayer.open(Audio('assets/audio/meow1.mp3'));
+            audioPlayer.open(Audio('assets/audio/meow$a.mp3'));
           }),
         );
       }
