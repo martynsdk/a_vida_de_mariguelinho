@@ -130,6 +130,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       subtitle:
                       Text('Incríveis peripécias e muito sono.'),
                     ),
+
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
@@ -171,23 +173,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
 
-              //HOME
 
 
-              Container(
-                height: MediaQuery.of(context).size.height,
-                alignment: Alignment.topCenter,
-                //height: 300,
-                margin: const EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(imageList[1]),
-                        fit: BoxFit.fitHeight),
-                    borderRadius: BorderRadius.circular(15)),
-              ),
 
 
-              Container(
+
+              Card(
                 margin: const EdgeInsets.all(15),
                 child: CarouselSlider.builder(
                   itemCount: imageList.length,
@@ -216,12 +207,21 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                       ),
-                      onTap: () {
-                        var url = imageList[i];
-                      },
                     );
                   },
                 ),
+              ),
+
+              Container(
+                height: MediaQuery.of(context).size.height,
+                alignment: Alignment.topCenter,
+                //height: 300,
+                margin: const EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(imageList[1]),
+                        fit: BoxFit.fitHeight),
+                    borderRadius: BorderRadius.circular(15)),
               ),
 
               Card(
@@ -256,7 +256,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-
             ],
           ),
         ),
@@ -270,22 +269,35 @@ class _MyHomePageState extends State<MyHomePage> {
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
         // space to fit everything.
+
+          //HOME
+
         child: ListView(
-          // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
+          children: <Widget>[
+            const UserAccountsDrawerHeader(
+              accountName: Text("Enzo Marighella"),
+              accountEmail: Text("marighella@batmandocarianos.com"),
+              currentAccountPicture: CircleAvatar(
+                radius: 30.0,
+                backgroundImage:
+                    AssetImage('assets/images/mariguelinho_main_picture.jpg'),
+                backgroundColor: Colors.redAccent,
+              ),
+            ),
+
+            /***const DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.redAccent,
               ),
               child: Text('Home'),
-            ),
+            ),***/
+
             ListTile(
-              title: const Text('Fale com o Gato'),
+              title: const Text('Pergunte ao Gato'),
               leading: const Icon(Icons.favorite),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  //return const AboutName(title: 'O Nome do Gato');
                   return const TalkToTheCat();
                 }));
                 // Update the state of the app.
@@ -293,6 +305,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               hoverColor: Colors.redAccent,
             ),
+
             ListTile(
               title: const Text('Fotinhas'),
               leading: const Icon(Icons.photo_album_rounded),
@@ -306,6 +319,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               hoverColor: Colors.redAccent,
             ),
+
             ListTile(
               title: const Text('Doe cripto'),
               leading: const Icon(Icons.wallet_membership),
@@ -318,8 +332,30 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               hoverColor: Colors.redAccent,
             ),
+
+            AvatarGlow(
+              glowColor: Theme.of(context).primaryColor,
+              endRadius: 150.0,
+              duration: const Duration(milliseconds: 3000),
+              repeatPauseDuration: const Duration(milliseconds: 100),
+              repeat: true,
+              child: FloatingActionButton(
+                backgroundColor: Theme.of(context).primaryColor,
+                onPressed: _incrementCounter,
+                tooltip: "As flores são bonitas em qualquer lugar do mundo, muita gente tem forma mas não tem conteúdo.",
+                child: const Icon(Icons.online_prediction, size: 40,),
+              ),
+            ),
+
+
+
+
           ],
         ),
+
+
+
+
       ),
 
 
