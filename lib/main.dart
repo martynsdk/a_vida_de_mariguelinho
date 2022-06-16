@@ -161,6 +161,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
               Card(
                 margin: const EdgeInsets.all(15),
+                child: Container(
+                  height: MediaQuery.of(context).size.height,
                 child: CarouselSlider.builder(
                   itemCount: imageList.length,
                   options: CarouselOptions(
@@ -191,6 +193,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                 ),
+              ),
               ),
 
               Container(
