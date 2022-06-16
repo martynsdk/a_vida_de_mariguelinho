@@ -123,7 +123,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Image.asset(imageList[0], fit: BoxFit.fill),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset(imageList[0], fit: BoxFit.fill),
+                    ),
+
+
                     const ListTile(
                       leading: Icon(Icons.album),
                       title: Text('O gato mais doidão'),
