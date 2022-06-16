@@ -198,11 +198,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 alignment: Alignment.topCenter,
                 //height: 300,
                 margin: const EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(imageList[1]),
-                        fit: BoxFit.fitHeight),
-                    borderRadius: BorderRadius.circular(15)),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: Image.asset(imageList[1],fit: BoxFit.fitHeight),
+                  )
               ),
 
               Card(

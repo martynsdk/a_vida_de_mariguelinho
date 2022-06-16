@@ -116,11 +116,8 @@ class _MarighellosPictures extends State<MarighellosPictures> {
                           child:
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
-                            child: Image.asset(imageList[index], fit: BoxFit.fitHeight
-                            ),
+                            child: Image.asset(imageList[index], fit: BoxFit.fitHeight),
                           )
-
-                          //Image.asset(imageList[index], fit: BoxFit.fitHeight),
                         ),
                         onTap: () => Navigator.pop(
                           context,
