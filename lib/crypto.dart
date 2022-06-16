@@ -56,7 +56,10 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child: Image.asset(cryptoImageList[2], fit: BoxFit.fitHeight),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(cryptoImageList[2], fit: BoxFit.fitHeight),
+                      ),
                       height: 300,
                     ),
                     const ListTile(
@@ -85,7 +88,13 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child: Image.asset(cryptoImageList[9], fit: BoxFit.fitHeight),
+                                      child:
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[9], fit: BoxFit.fitHeight),
+                                      )
+
+
                                     ),
                                     onTap: () => Navigator.pop(
                                       context,
@@ -107,7 +116,12 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child: Image.asset(cryptoImageList[3], fit: BoxFit.fitHeight),
+                      child:
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                child: Image.asset(cryptoImageList[3], fit: BoxFit.fitHeight),
+              ),
+
                       height: 300,
                     ),
                     const ListTile(
@@ -136,7 +150,11 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child: Image.asset(cryptoImageList[10], fit: BoxFit.fitHeight),
+                                      child:
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[10], fit: BoxFit.fitHeight),
+                                      )
                                     ),
                                     onTap: () => Navigator.pop(
                                       context,
@@ -158,7 +176,13 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child: Image.asset(cryptoImageList[0], fit: BoxFit.fitHeight),
+                      child:
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                child: Image.asset(cryptoImageList[0], fit: BoxFit.fitHeight),
+              ),
+
+
                       height: 300,
                     ),
                     const ListTile(
@@ -187,7 +211,13 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child: Image.asset(cryptoImageList[7], fit: BoxFit.fitHeight),
+                                      child:
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[7], fit: BoxFit.fitHeight),
+                                      )
+
+
                                     ),
                                     onTap: () => Navigator.pop(
                                       context,
@@ -209,7 +239,13 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child: Image.asset(cryptoImageList[1], fit: BoxFit.fitHeight),
+                      child:
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                child: Image.asset(cryptoImageList[1], fit: BoxFit.fitHeight),
+              ),
+
+
                       height: 300,
                     ),
                     const ListTile(
@@ -238,7 +274,13 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child: Image.asset(cryptoImageList[8], fit: BoxFit.fitHeight),
+                                      child:
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[8], fit: BoxFit.fitHeight),
+                                      ),
+
+
                                     ),
                                     onTap: () => Navigator.pop(
                                       context,
@@ -260,7 +302,11 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child: Image.asset(cryptoImageList[5], fit: BoxFit.fitHeight),
+                      child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                child: Image.asset(cryptoImageList[5], fit: BoxFit.fitHeight),
+              ),
+
                       height: 300,
                     ),
                     const ListTile(
@@ -289,7 +335,12 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child: Image.asset(cryptoImageList[12], fit: BoxFit.fitHeight),
+                                      child:
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[12], fit: BoxFit.fitHeight),
+                                      ),
+
                                     ),
                                     onTap: () => Navigator.pop(
                                       context,
@@ -311,7 +362,11 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child: Image.asset(cryptoImageList[4], fit: BoxFit.fitHeight),
+                      child:
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                child: Image.asset(cryptoImageList[4], fit: BoxFit.fitHeight),
+              ),
                       height: 300,
                     ),
                     const ListTile(
@@ -340,7 +395,11 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child: Image.asset(cryptoImageList[11], fit: BoxFit.fitHeight),
+                                      child:
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[11], fit: BoxFit.fitHeight),
+                                      ),
                                     ),
                                     onTap: () => Navigator.pop(
                                       context,
@@ -362,7 +421,11 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child: Image.asset(cryptoImageList[6], fit: BoxFit.fitHeight),
+                      child:
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                child: Image.asset(cryptoImageList[6], fit: BoxFit.fitHeight),
+              ),
                       height: 300,
                     ),
                     const ListTile(
@@ -384,7 +447,11 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child: Image.asset(cryptoImageList[13], fit: BoxFit.fitHeight),
+                                      child:
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[13], fit: BoxFit.fitHeight),
+                                      ),
                                     ),
                                     onTap: () => Navigator.pop(
                                       context,
@@ -406,7 +473,10 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child: Image.asset(cryptoImageList[13], fit: BoxFit.fitHeight),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[13], fit: BoxFit.fitHeight),
+                                      ),
                                     ),
                                     onTap: () => Navigator.pop(
                                       context,
