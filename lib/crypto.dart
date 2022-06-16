@@ -1,6 +1,4 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'main.dart';
 import 'package:flutter/services.dart';
 
 final List<String> cryptoImageList = [
