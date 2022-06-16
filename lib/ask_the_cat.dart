@@ -6,8 +6,8 @@ import 'package:assets_audio_player/assets_audio_player.dart';
 import 'dart:math';
 
 
-class TalkToTheCat extends StatefulWidget {
-  const TalkToTheCat({Key? key}) : super(key: key);
+class AskTheCat extends StatefulWidget {
+  const AskTheCat({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,14 +17,14 @@ class TalkToTheCat extends StatefulWidget {
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
       ),
-      home: const TalkToTheCat(),
+      home: const AskTheCat(),
     );
   }
   @override
-  _TalkToTheCatState createState() => _TalkToTheCatState();
+  _AskTheCatState createState() => _AskTheCatState();
 }
 
-class _TalkToTheCatState extends State<TalkToTheCat> {
+class _AskTheCatState extends State<AskTheCat> {
 
   final Map<String, HighlightedWord> _highlights = {
     'Marighella': HighlightedWord(

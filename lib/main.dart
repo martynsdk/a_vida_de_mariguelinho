@@ -1,4 +1,4 @@
-import 'package:a_vida_de_mariguelinho/talk_to_the_cat.dart';
+import 'package:a_vida_de_mariguelinho/ask_the_cat.dart';
 import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'crypto.dart';
@@ -131,7 +131,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       Text('Incríveis peripécias e muito sono.'),
                     ),
 
-
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
@@ -154,29 +153,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-
-              Card(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      const SizedBox(width: 8),
-                      const Text(
-                        'Quantidade de vezes que o botão + foi pressionado:',
-                      ),
-                      const SizedBox(width: 8),
-                      Text(
-                        '$_counter',
-                        style: Theme.of(context).textTheme.headline4,
-                      ),
-                      const SizedBox(width: 8),
-                    ],
-                ),
-              ),
-
-
-
-
-
 
               Card(
                 margin: const EdgeInsets.all(15),
@@ -286,19 +262,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
 
-            /***const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.redAccent,
-              ),
-              child: Text('Home'),
-            ),***/
-
             ListTile(
               title: const Text('Pergunte ao Gato'),
               leading: const Icon(Icons.favorite),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const TalkToTheCat();
+                  return const AskTheCat();
                 }));
                 // Update the state of the app.
                 // ...
