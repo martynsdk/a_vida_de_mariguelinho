@@ -51,6 +51,10 @@ class _CryptoHome extends State<CryptoHome> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
+                    SizedBox(
+                      child: Image.asset(cryptoImageList[2], fit: BoxFit.fitHeight),
+                      height: 300,
+                    ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
                       title: Text('Doe Bitcoins para o Mariguelinho'),
@@ -84,7 +88,12 @@ class _CryptoHome extends State<CryptoHome> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
+                    SizedBox(
+                      child: Image.asset(cryptoImageList[3], fit: BoxFit.fitHeight),
+                      height: 300,
+                    ),
                     const ListTile(
+                      //leading: Icon(Icons.monetization_on),
                       leading: Icon(Icons.monetization_on),
                       title: Text('Doe Ethereum para o Mariguelinho'),
                       subtitle:
@@ -118,6 +127,10 @@ class _CryptoHome extends State<CryptoHome> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
+                    SizedBox(
+                      child: Image.asset(cryptoImageList[0], fit: BoxFit.fitHeight),
+                      height: 300,
+                    ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
                       title: Text('Doe DogeCoin para o Mariguelinho'),
@@ -150,6 +163,10 @@ class _CryptoHome extends State<CryptoHome> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
+                    SizedBox(
+                      child: Image.asset(cryptoImageList[1], fit: BoxFit.fitHeight),
+                      height: 300,
+                    ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
                       title: Text('Doe ShibaInu para o Mariguelinho'),
@@ -182,6 +199,10 @@ class _CryptoHome extends State<CryptoHome> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
+                    SizedBox(
+                      child: Image.asset(cryptoImageList[5], fit: BoxFit.fitHeight),
+                      height: 300,
+                    ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
                       title: Text('Doe USD Coin para o Mariguelinho'),
@@ -214,6 +235,10 @@ class _CryptoHome extends State<CryptoHome> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
+                    SizedBox(
+                      child: Image.asset(cryptoImageList[4], fit: BoxFit.fitHeight),
+                      height: 300,
+                    ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
                       title: Text('Doe Cardano para o Mariguelinho'),
@@ -246,6 +271,10 @@ class _CryptoHome extends State<CryptoHome> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
+                    SizedBox(
+                      child: Image.asset(cryptoImageList[6], fit: BoxFit.fitHeight),
+                      height: 300,
+                    ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
                       title: Text('Faça um Pix para o Mariguelinho.'),
