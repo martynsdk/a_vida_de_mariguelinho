@@ -335,7 +335,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             AvatarGlow(
               glowColor: Theme.of(context).primaryColor,
-              endRadius: 150.0,
+              endRadius: 100.0,
               duration: const Duration(milliseconds: 3000),
               repeatPauseDuration: const Duration(milliseconds: 100),
               repeat: true,
@@ -343,34 +343,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 backgroundColor: Theme.of(context).primaryColor,
                 onPressed: _incrementCounter,
                 tooltip: "As flores são bonitas em qualquer lugar do mundo, muita gente tem forma mas não tem conteúdo.",
-                child: const Icon(Icons.online_prediction, size: 40,),
+                //child: const Icon(Icons.favorite, size: 40,),
+                child: Text('$_counter'),
               ),
             ),
 
-
-
-
           ],
-        ),
-
-
-
-
-      ),
-
-
-
-      floatingActionButton: AvatarGlow(
-        glowColor: Theme.of(context).primaryColor,
-        endRadius: 75.0,
-        duration: const Duration(milliseconds: 3000),
-        repeatPauseDuration: const Duration(milliseconds: 100),
-        repeat: true,
-        child: FloatingActionButton(
-          backgroundColor: Theme.of(context).primaryColor,
-          onPressed: _incrementCounter,
-          tooltip: "As flores são bonitas em qualquer lugar do mundo, muita gente tem forma mas não tem conteúdo.",
-          child: const Icon(Icons.add),
         ),
       ),
     );
