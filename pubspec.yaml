@@ -127,6 +127,13 @@ flutter:
       - assets/images/crypto_home/usdcoin_logo.png
       - assets/images/crypto_home/cardano_logo.png
       - assets/images/crypto_home/pix_logo.png
+      - assets/images/crypto_home/dogecoin_qrcode.png
+      - assets/images/crypto_home/shibainu_qrcode.png
+      - assets/images/crypto_home/ethereum_qrcode.png
+      - assets/images/crypto_home/bitcoin_qrcode.png
+      - assets/images/crypto_home/usdcoin_qrcode.png
+      - assets/images/crypto_home/cardano_qrcode.png
+      - assets/images/crypto_home/pix_qrcode.png
       - assets/audio/meow1.mp3
       - assets/audio/meow2.mp3
   #   - images/a_dot_ham.jpeg
