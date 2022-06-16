@@ -50,7 +50,6 @@ class _CryptoHome extends State<CryptoHome> {
         backgroundColor: Theme.of(context).primaryColor,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(32.0),
         child: Center(
           child: Column(
             children: <Widget>[
