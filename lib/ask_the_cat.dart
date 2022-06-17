@@ -36,11 +36,46 @@ class _AskTheCatState extends State<AskTheCat> {
         fontWeight: FontWeight.bold,
       ),
     ),
+    'Maconha': HighlightedWord(
+      onTap: () => print('Maconha'),
+      textStyle: const TextStyle(
+        color: Colors.yellow,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'Vida': HighlightedWord(
+      onTap: () => print('Vida'),
+      textStyle: const TextStyle(
+        color: Colors.red,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'Deus': HighlightedWord(
+      onTap: () => print('Deus'),
+      textStyle: const TextStyle(
+        color: Colors.green,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'Aqui': HighlightedWord(
+      onTap: () => print('Aqui'),
+      textStyle: const TextStyle(
+        color: Colors.pink,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'Quando': HighlightedWord(
+      onTap: () => print('Quando'),
+      textStyle: const TextStyle(
+        color: Colors.brown,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
   };
 
   stt.SpeechToText _speech = stt.SpeechToText();
   bool _isListening = false;
-  String _text = 'Fale um pouco mais';
+  String _text = 'Faça uma pergunta e terá uma resposta';
   double _confidence = 1.0;
 
   @override
@@ -62,7 +97,7 @@ class _AskTheCatState extends State<AskTheCat> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
-        title: Text('Confidence: ${(_confidence * 100.0).toStringAsFixed(1)}%'),
+        title: const Text('Pergunte ao Gato'),
         centerTitle: true,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

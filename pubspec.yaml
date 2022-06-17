@@ -135,6 +135,7 @@ flutter:
       - assets/images/crypto_home/usdcoin_qrcode.png
       - assets/images/crypto_home/cardano_qrcode.png
       - assets/images/crypto_home/pix_qrcode.png
+      - assets/images/sport_club_internacional/sportclubinternacional1.gif
       - assets/audio/meow1.mp3
       - assets/audio/meow2.mp3
       - assets/audio/meow3.mp3
