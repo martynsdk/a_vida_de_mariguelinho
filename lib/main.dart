@@ -173,11 +173,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     autoPlay: true,
                     autoPlayInterval: const Duration(seconds: 3),
                     reverse: false,
-                    aspectRatio: 2.0,
+                    aspectRatio: 1.0,
                   ),
-                  //abb
                   itemBuilder: (context, i, id) {
-                    //for onTap to redirect to another screen
                     return GestureDetector(
                       child: Container(
                         decoration: BoxDecoration(
@@ -187,7 +185,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
                             imageList[i],
-                            fit: BoxFit.fitHeight,
+                            fit: BoxFit.cover,
                             scale: 1.0
                           ),
                         ),
