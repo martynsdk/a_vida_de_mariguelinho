@@ -196,16 +196,15 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               ),
 
-              Container(
-                height: MediaQuery.of(context).size.height,
-                alignment: Alignment.topCenter,
-                //height: 300,
-                margin: const EdgeInsets.all(10.0),
+              Card(
+                  margin: const EdgeInsets.all(15),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(imageList[1],fit: BoxFit.fitHeight),
                   )
               ),
+
+
 
               Card(
                 child: Column(

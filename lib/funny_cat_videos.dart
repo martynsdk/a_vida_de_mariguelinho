@@ -46,10 +46,16 @@ class _FunnyCatVideos extends State<FunnyCatVideos> {
 
 
       body:
-          Row(
+          WillPopScope(
+            onWillPop: () async {
+              _controller.toggleFullScreenMode();
+              return Future.value(false);
+            },
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(child: YoutubePlayer(
+              Expanded(
+                child: YoutubePlayer(
                 controller: _controller,
                 liveUIColor: Colors.redAccent,
                 onReady: () {
@@ -60,6 +66,7 @@ class _FunnyCatVideos extends State<FunnyCatVideos> {
 
 
           ),
+    ),
 
 
 
