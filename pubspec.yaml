@@ -40,6 +40,7 @@ dependencies:
   avatar_glow: ^2.0.2
   highlight_text: ^1.4.0
   assets_audio_player: ^3.0.4+3
+  youtube_player_flutter: ^8.1.0
 
 dev_dependencies:
   flutter_test:
@@ -136,6 +137,19 @@ flutter:
       - assets/images/crypto_home/pix_qrcode.png
       - assets/audio/meow1.mp3
       - assets/audio/meow2.mp3
+      - assets/audio/meow3.mp3
+      - assets/audio/meow4.mp3
+      - assets/audio/meow5.mp3
+      - assets/audio/meow6.mp3
+      - assets/audio/meow7.mp3
+      - assets/audio/meow8.mp3
+      - assets/audio/meow9.mp3
+      - assets/audio/meow10.mp3
+      - assets/audio/meow11.mp3
+      - assets/audio/meow12.mp3
+      - assets/audio/meow13.mp3
+      - assets/audio/meow14.mp3
+      - assets/audio/meow15.mp3
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

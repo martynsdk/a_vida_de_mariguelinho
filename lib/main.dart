@@ -1,4 +1,5 @@
 import 'package:a_vida_de_mariguelinho/ask_the_cat.dart';
+import 'package:a_vida_de_mariguelinho/funny_cat_videos.dart';
 import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'crypto.dart';
@@ -161,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
               Card(
                 margin: const EdgeInsets.all(15),
-                child: Container(
+                child: SizedBox(
                   height: MediaQuery.of(context).size.height,
                 child: CarouselSlider.builder(
                   itemCount: imageList.length,
@@ -308,6 +309,20 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               hoverColor: Colors.redAccent,
             ),
+
+            ListTile(
+              title: const Text('Videos de Gatinhos'),
+              leading: const Icon(Icons.monitor_outlined),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const FunnyCatVideos();
+                }));
+                // Update the state of the app.
+                // ...
+              },
+              hoverColor: Colors.redAccent,
+            ),
+
 
             AvatarGlow(
               glowColor: Theme.of(context).primaryColor,
