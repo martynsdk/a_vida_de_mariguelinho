@@ -28,7 +28,7 @@ flags: const YoutubePlayerFlags(
 isLive: true,
 autoPlay: true,
 showLiveFullscreenButton: true,
-controlsVisibleAtStart: true
+controlsVisibleAtStart: true,
 ),
 );
 
@@ -42,8 +42,6 @@ class _FunnyCatVideos extends State<FunnyCatVideos> {
         title: const Text('Videos de Gatinhos'),
         centerTitle: true,
       ),
-
-
 
       body:
           WillPopScope(
