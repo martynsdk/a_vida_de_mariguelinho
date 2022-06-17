@@ -44,12 +44,7 @@ class _FunnyCatVideos extends State<FunnyCatVideos> {
       ),
 
       body:
-          WillPopScope(
-            onWillPop: () async {
-              _controller.toggleFullScreenMode();
-              return Future.value(false);
-            },
-          child: Row(
+          Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
@@ -61,10 +56,7 @@ class _FunnyCatVideos extends State<FunnyCatVideos> {
                 },
               ),)
             ],
-
-
           ),
-    ),
 
 
 

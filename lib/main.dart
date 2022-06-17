@@ -2,6 +2,7 @@ import 'package:a_vida_de_mariguelinho/ask_the_cat.dart';
 import 'package:a_vida_de_mariguelinho/funny_cat_videos.dart';
 import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:flutter/services.dart';
 import 'crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -250,9 +251,9 @@ class _MyHomePageState extends State<MyHomePage> {
         drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
+        // space to fit everything
 
-          //HOME
+
 
         child: ListView(
           padding: EdgeInsets.zero,
@@ -269,6 +270,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
             ListTile(
+
               title: const Text('Pergunte ao Gato'),
               leading: const Icon(Icons.favorite),
               onTap: () {
@@ -276,6 +278,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   return const AskTheCat();
                 }));
                 // Update the state of the app.
+                SystemChrome.setPreferredOrientations(
+                    [DeviceOrientation.portraitUp]);
                 // ...
               },
               hoverColor: Colors.redAccent,
@@ -285,7 +289,8 @@ class _MyHomePageState extends State<MyHomePage> {
               title: const Text('Fotinhas'),
               leading: const Icon(Icons.photo_album_rounded),
               onTap: () {
-                //Navigator.pop(context);
+                SystemChrome.setPreferredOrientations(
+                    [DeviceOrientation.portraitUp]);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const MarighellosPictures(title: 'Fotinhas');
                 }));
@@ -299,6 +304,8 @@ class _MyHomePageState extends State<MyHomePage> {
               title: const Text('Doe cripto'),
               leading: const Icon(Icons.wallet_membership),
               onTap: () {
+                SystemChrome.setPreferredOrientations(
+                    [DeviceOrientation.portraitUp]);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const CryptoHome(title: 'Doe cripto');
                 }));
@@ -312,6 +319,8 @@ class _MyHomePageState extends State<MyHomePage> {
               title: const Text('Videos de Gatinhos'),
               leading: const Icon(Icons.monitor_outlined),
               onTap: () {
+                SystemChrome.setPreferredOrientations(
+                    [DeviceOrientation.portraitUp]);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const FunnyCatVideos();
                 }));
