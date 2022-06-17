@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:highlight_text/highlight_text.dart';
@@ -110,6 +112,7 @@ class _AskTheCatState extends State<AskTheCat> {
             _text = '${val.recognizedWords}?';
             if (val.hasConfidenceRating && val.confidence > 0) {_confidence = val.confidence;}
             audioPlayer.open(Audio('assets/audio/meow$a.mp3'));
+            setState(() => _isListening = false);
           }),
         );
       }

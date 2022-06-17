@@ -168,6 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   itemCount: imageList.length,
                   options: CarouselOptions(
                     enlargeCenterPage: true,
+                    height: MediaQuery.of(context).size.height,
                     //height: 300,
                     autoPlay: true,
                     autoPlayInterval: const Duration(seconds: 3),

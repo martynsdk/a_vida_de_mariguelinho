@@ -46,13 +46,21 @@ class _FunnyCatVideos extends State<FunnyCatVideos> {
 
 
       body:
-      YoutubePlayer(
-        controller: _controller,
-        liveUIColor: Colors.redAccent,
-        onReady: () {
-          _controller.play();
-          },
-      ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(child: YoutubePlayer(
+                controller: _controller,
+                liveUIColor: Colors.redAccent,
+                onReady: () {
+                  _controller.play();
+                },
+              ),)
+            ],
+
+
+          ),
+
 
 
 
