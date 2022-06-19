@@ -29,43 +29,37 @@ class AskTheCat extends StatefulWidget {
 class _AskTheCatState extends State<AskTheCat> {
 
   final Map<String, HighlightedWord> _highlights = {
-    'Marighella': HighlightedWord(
-      onTap: () => print('Marighella'),
+    'vida': HighlightedWord(
       textStyle: const TextStyle(
         color: Colors.blue,
         fontWeight: FontWeight.bold,
       ),
     ),
-    'Maconha': HighlightedWord(
-      onTap: () => print('Maconha'),
+    'maconha': HighlightedWord(
       textStyle: const TextStyle(
-        color: Colors.yellow,
+        color: Colors.greenAccent,
         fontWeight: FontWeight.bold,
       ),
     ),
-    'Vida': HighlightedWord(
-      onTap: () => print('Vida'),
+    'por que': HighlightedWord(
       textStyle: const TextStyle(
         color: Colors.red,
         fontWeight: FontWeight.bold,
       ),
     ),
-    'Deus': HighlightedWord(
-      onTap: () => print('Deus'),
+    'deus': HighlightedWord(
       textStyle: const TextStyle(
         color: Colors.green,
         fontWeight: FontWeight.bold,
       ),
     ),
-    'Aqui': HighlightedWord(
-      onTap: () => print('Aqui'),
+    'aqui': HighlightedWord(
       textStyle: const TextStyle(
         color: Colors.pink,
         fontWeight: FontWeight.bold,
       ),
     ),
-    'Quando': HighlightedWord(
-      onTap: () => print('Quando'),
+    'quando': HighlightedWord(
       textStyle: const TextStyle(
         color: Colors.brown,
         fontWeight: FontWeight.bold,
@@ -76,7 +70,6 @@ class _AskTheCatState extends State<AskTheCat> {
   stt.SpeechToText _speech = stt.SpeechToText();
   bool _isListening = false;
   String _text = 'Faça uma pergunta e terá uma resposta';
-  double _confidence = 1.0;
 
   @override
   void initState() {
@@ -108,9 +101,13 @@ class _AskTheCatState extends State<AskTheCat> {
         duration: const Duration(milliseconds: 3000),
         repeatPauseDuration: const Duration(milliseconds: 100),
         repeat: true,
-        child: FloatingActionButton(
-          onPressed: _listen,
-          child: Icon(_isListening ? Icons.mic : Icons.mic_none),
+        child: InkWell(
+          onLongPress: _listen,
+          child: FloatingActionButton(
+            onPressed: _listen,
+            child: Icon(_isListening ? Icons.mic : Icons.mic_none)
+          ),
+
         ),
       ),
       body: SingleChildScrollView(
@@ -146,7 +143,7 @@ class _AskTheCatState extends State<AskTheCat> {
           listenFor: const Duration(seconds: 5),
           onResult: (val) => setState(() {
             _text = '${val.recognizedWords}?';
-            if (val.hasConfidenceRating && val.confidence > 0) {_confidence = val.confidence;}
+            if (val.hasConfidenceRating && val.confidence > 0) {1.0 == val.confidence;}
             audioPlayer.open(Audio('assets/audio/meow$a.mp3'));
             setState(() => _isListening = false);
           }),

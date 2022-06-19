@@ -33,16 +33,11 @@ class _SoccerTeam extends State<SoccerTeam> {
         centerTitle: true,
       ),
 
-      body: Container(
+      body: SizedBox(
           width: double.infinity,
         height: double.infinity,
         child: Image.asset('assets/images/sport_club_internacional/sportclubinternacional1.gif', fit: BoxFit.fill)
       ),
-
-
-
-
-
     );
   }
 
