@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:highlight_text/highlight_text.dart';
@@ -90,6 +88,7 @@ class _AskTheCatState extends State<AskTheCat> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
+        foregroundColor: Theme.of(context).secondaryHeaderColor,
         title: const Text('Pergunte ao Gato'),
         centerTitle: true,
       ),
@@ -153,9 +152,5 @@ class _AskTheCatState extends State<AskTheCat> {
       setState(() => _isListening = false);
       _speech.stop();
     }
-
   }
-
-
-
 }

@@ -29,6 +29,7 @@ class _SoccerTeam extends State<SoccerTeam> {
         backgroundColor: Theme
             .of(context)
             .primaryColor,
+        foregroundColor: Theme.of(context).secondaryHeaderColor,
         title: const Text('O Clube do Coração'),
         centerTitle: true,
       ),

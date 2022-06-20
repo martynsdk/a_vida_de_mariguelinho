@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-
 class FunnyCatVideos extends StatefulWidget {
   const FunnyCatVideos({Key? key}) : super(key: key);
 
@@ -22,16 +21,15 @@ class FunnyCatVideos extends StatefulWidget {
   _FunnyCatVideos createState() => _FunnyCatVideos();
 }
 
-YoutubePlayerController _controller = YoutubePlayerController (
-initialVideoId: "ZcYdCU3Znyo",
-flags: const YoutubePlayerFlags(
-isLive: true,
-autoPlay: true,
-showLiveFullscreenButton: true,
-controlsVisibleAtStart: true,
-),
+YoutubePlayerController _controller = YoutubePlayerController(
+  initialVideoId: "ZcYdCU3Znyo",
+  flags: const YoutubePlayerFlags(
+    isLive: true,
+    autoPlay: true,
+    showLiveFullscreenButton: true,
+    controlsVisibleAtStart: true,
+  ),
 );
-
 
 class _FunnyCatVideos extends State<FunnyCatVideos> {
   @override
@@ -39,29 +37,24 @@ class _FunnyCatVideos extends State<FunnyCatVideos> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
+        foregroundColor: Theme.of(context).secondaryHeaderColor,
         title: const Text('Videos de Gatinhos'),
         centerTitle: true,
       ),
-
-      body:
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: YoutubePlayer(
-                controller: _controller,
-                liveUIColor: Colors.redAccent,
-                onReady: () {
-                  _controller.play();
-                },
-              ),)
-            ],
-          ),
-
-
-
-
+      body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: YoutubePlayer(
+              controller: _controller,
+              liveUIColor: Colors.redAccent,
+              onReady: () {
+                _controller.play();
+              },
+            ),
+          )
+        ],
+      ),
     );
   }
-  
 }

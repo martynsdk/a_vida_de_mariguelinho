@@ -113,6 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
+        foregroundColor: Theme.of(context).secondaryHeaderColor,
         title: Text(widget.title),
         centerTitle: true,
       ),
@@ -250,11 +251,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
         drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything
-
-
 
         child: ListView(
           padding: EdgeInsets.zero,
@@ -295,8 +291,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const MarighellosPictures(title: 'Fotinhas');
                 }));
-                // Update the state of the app.
-                // ...
               },
               hoverColor: Colors.redAccent,
             ),
@@ -310,8 +304,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const CryptoHome(title: 'Doe cripto');
                 }));
-                // Update the state of the app.
-                // ...
               },
               hoverColor: Colors.redAccent,
             ),
@@ -325,8 +317,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const FunnyCatVideos();
                 }));
-                // Update the state of the app.
-                // ...
               },
               hoverColor: Colors.redAccent,
             ),
@@ -340,8 +330,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const SoccerTeam();
                 }));
-                // Update the state of the app.
-                // ...
               },
               hoverColor: Colors.redAccent,
             ),
@@ -361,7 +349,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('$_counter'),
               ),
             ),
-
           ],
         ),
       ),

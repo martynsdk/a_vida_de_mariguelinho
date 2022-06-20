@@ -46,6 +46,7 @@ class _CryptoHome extends State<CryptoHome> {
         title: Text(widget.title),
         centerTitle: true,
         backgroundColor: Theme.of(context).primaryColor,
+        foregroundColor: Theme.of(context).secondaryHeaderColor,
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -58,7 +59,8 @@ class _CryptoHome extends State<CryptoHome> {
                     SizedBox(
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(cryptoImageList[2], fit: BoxFit.fitHeight),
+                        child: Image.asset(cryptoImageList[2],
+                            fit: BoxFit.fitHeight),
                       ),
                       height: 300,
                     ),
@@ -74,7 +76,8 @@ class _CryptoHome extends State<CryptoHome> {
                         TextButton(
                           child: const Icon(Icons.copy, size: 25),
                           onPressed: () async {
-                            await Clipboard.setData(const ClipboardData(text: '3Gbfxu3FUvi4dTLu2roSRvg8ZJXzNyEcQT'));
+                            await Clipboard.setData(const ClipboardData(
+                                text: '3Gbfxu3FUvi4dTLu2roSRvg8ZJXzNyEcQT'));
                           },
                         ),
                         const SizedBox(width: 8),
@@ -87,15 +90,13 @@ class _CryptoHome extends State<CryptoHome> {
                                 return Dialog(
                                   child: GestureDetector(
                                     child: Hero(
-                                      tag: 'imageHero',
-                                      child:
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(8.0),
-                                        child: Image.asset(cryptoImageList[9], fit: BoxFit.fitHeight),
-                                      )
-
-
-                                    ),
+                                        tag: 'imageHero',
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                          child: Image.asset(cryptoImageList[9],
+                                              fit: BoxFit.fitHeight),
+                                        )),
                                     onTap: () => Navigator.pop(
                                       context,
                                     ),
@@ -116,19 +117,18 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child:
-                ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(cryptoImageList[3], fit: BoxFit.fitHeight),
-              ),
-
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(cryptoImageList[3],
+                            fit: BoxFit.fitHeight),
+                      ),
                       height: 300,
                     ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
                       title: Text('Doe Ethereum para o Mariguelinho'),
-                      subtitle:
-                          Text('Carteira: 0x209f457f3d996fe12f4b3B82667Cd1e1ccdd1C2C'),
+                      subtitle: Text(
+                          'Carteira: 0x209f457f3d996fe12f4b3B82667Cd1e1ccdd1C2C'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -136,7 +136,9 @@ class _CryptoHome extends State<CryptoHome> {
                         TextButton(
                           child: const Icon(Icons.copy, size: 25),
                           onPressed: () async {
-                            await Clipboard.setData(const ClipboardData(text: '0x209f457f3d996fe12f4b3B82667Cd1e1ccdd1C2C'));
+                            await Clipboard.setData(const ClipboardData(
+                                text:
+                                    '0x209f457f3d996fe12f4b3B82667Cd1e1ccdd1C2C'));
                           },
                         ),
                         const SizedBox(width: 8),
@@ -149,13 +151,14 @@ class _CryptoHome extends State<CryptoHome> {
                                 return Dialog(
                                   child: GestureDetector(
                                     child: Hero(
-                                      tag: 'imageHero',
-                                      child:
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(8.0),
-                                        child: Image.asset(cryptoImageList[10], fit: BoxFit.fitHeight),
-                                      )
-                                    ),
+                                        tag: 'imageHero',
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                          child: Image.asset(
+                                              cryptoImageList[10],
+                                              fit: BoxFit.fitHeight),
+                                        )),
                                     onTap: () => Navigator.pop(
                                       context,
                                     ),
@@ -176,13 +179,11 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child:
-                ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(cryptoImageList[0], fit: BoxFit.fitHeight),
-              ),
-
-
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(cryptoImageList[0],
+                            fit: BoxFit.fitHeight),
+                      ),
                       height: 300,
                     ),
                     const ListTile(
@@ -197,7 +198,8 @@ class _CryptoHome extends State<CryptoHome> {
                         TextButton(
                           child: const Icon(Icons.copy, size: 25),
                           onPressed: () async {
-                            await Clipboard.setData(const ClipboardData(text: 'DR6gZSRvKmKNpREMnUVTm5GF6ZAyCcw3YM'));
+                            await Clipboard.setData(const ClipboardData(
+                                text: 'DR6gZSRvKmKNpREMnUVTm5GF6ZAyCcw3YM'));
                           },
                         ),
                         const SizedBox(width: 8),
@@ -210,15 +212,13 @@ class _CryptoHome extends State<CryptoHome> {
                                 return Dialog(
                                   child: GestureDetector(
                                     child: Hero(
-                                      tag: 'imageHero',
-                                      child:
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(8.0),
-                                        child: Image.asset(cryptoImageList[7], fit: BoxFit.fitHeight),
-                                      )
-
-
-                                    ),
+                                        tag: 'imageHero',
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                          child: Image.asset(cryptoImageList[7],
+                                              fit: BoxFit.fitHeight),
+                                        )),
                                     onTap: () => Navigator.pop(
                                       context,
                                     ),
@@ -239,20 +239,18 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child:
-                ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(cryptoImageList[1], fit: BoxFit.fitHeight),
-              ),
-
-
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(cryptoImageList[1],
+                            fit: BoxFit.fitHeight),
+                      ),
                       height: 300,
                     ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
                       title: Text('Doe ShibaInu para o Mariguelinho'),
-                      subtitle:
-                          Text('Carteira: 0x457E9D3f78F396C98EC3223a42585490465E8172'),
+                      subtitle: Text(
+                          'Carteira: 0x457E9D3f78F396C98EC3223a42585490465E8172'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -260,7 +258,9 @@ class _CryptoHome extends State<CryptoHome> {
                         TextButton(
                           child: const Icon(Icons.copy, size: 25),
                           onPressed: () async {
-                            await Clipboard.setData(const ClipboardData(text: '0x457E9D3f78F396C98EC3223a42585490465E8172'));
+                            await Clipboard.setData(const ClipboardData(
+                                text:
+                                    '0x457E9D3f78F396C98EC3223a42585490465E8172'));
                           },
                         ),
                         const SizedBox(width: 8),
@@ -274,13 +274,12 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child:
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(8.0),
-                                        child: Image.asset(cryptoImageList[8], fit: BoxFit.fitHeight),
+                                      child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[8],
+                                            fit: BoxFit.fitHeight),
                                       ),
-
-
                                     ),
                                     onTap: () => Navigator.pop(
                                       context,
@@ -303,17 +302,17 @@ class _CryptoHome extends State<CryptoHome> {
                   children: <Widget>[
                     SizedBox(
                       child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(cryptoImageList[5], fit: BoxFit.fitHeight),
-              ),
-
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(cryptoImageList[5],
+                            fit: BoxFit.fitHeight),
+                      ),
                       height: 300,
                     ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
                       title: Text('Doe USD Coin para o Mariguelinho'),
-                      subtitle:
-                          Text('Carteira: 0xD2CD120D1D5703c6f3AFe4ED2b92B969b2B593C9'),
+                      subtitle: Text(
+                          'Carteira: 0xD2CD120D1D5703c6f3AFe4ED2b92B969b2B593C9'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -321,7 +320,9 @@ class _CryptoHome extends State<CryptoHome> {
                         TextButton(
                           child: const Icon(Icons.copy, size: 25),
                           onPressed: () async {
-                            await Clipboard.setData(const ClipboardData(text: '0xD2CD120D1D5703c6f3AFe4ED2b92B969b2B593C9'));
+                            await Clipboard.setData(const ClipboardData(
+                                text:
+                                    '0xD2CD120D1D5703c6f3AFe4ED2b92B969b2B593C9'));
                           },
                         ),
                         const SizedBox(width: 8),
@@ -335,12 +336,12 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child:
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(8.0),
-                                        child: Image.asset(cryptoImageList[12], fit: BoxFit.fitHeight),
+                                      child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[12],
+                                            fit: BoxFit.fitHeight),
                                       ),
-
                                     ),
                                     onTap: () => Navigator.pop(
                                       context,
@@ -362,18 +363,18 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child:
-                ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(cryptoImageList[4], fit: BoxFit.fitHeight),
-              ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(cryptoImageList[4],
+                            fit: BoxFit.fitHeight),
+                      ),
                       height: 300,
                     ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
                       title: Text('Doe Cardano para o Mariguelinho'),
-                      subtitle:
-                          Text('Carteira: addr1vyhl9t3lvn5jmp5hd6vqektqal4yvurcs39mwjgq6lhdwfcgytgff'),
+                      subtitle: Text(
+                          'Carteira: addr1vyhl9t3lvn5jmp5hd6vqektqal4yvurcs39mwjgq6lhdwfcgytgff'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -381,7 +382,9 @@ class _CryptoHome extends State<CryptoHome> {
                         TextButton(
                           child: const Icon(Icons.copy, size: 25),
                           onPressed: () async {
-                            await Clipboard.setData(const ClipboardData(text: 'addr1vyhl9t3lvn5jmp5hd6vqektqal4yvurcs39mwjgq6lhdwfcgytgff'));
+                            await Clipboard.setData(const ClipboardData(
+                                text:
+                                    'addr1vyhl9t3lvn5jmp5hd6vqektqal4yvurcs39mwjgq6lhdwfcgytgff'));
                           },
                         ),
                         const SizedBox(width: 8),
@@ -395,10 +398,11 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child:
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(8.0),
-                                        child: Image.asset(cryptoImageList[11], fit: BoxFit.fitHeight),
+                                      child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[11],
+                                            fit: BoxFit.fitHeight),
                                       ),
                                     ),
                                     onTap: () => Navigator.pop(
@@ -421,18 +425,17 @@ class _CryptoHome extends State<CryptoHome> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     SizedBox(
-                      child:
-                ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(cryptoImageList[6], fit: BoxFit.fitHeight),
-              ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(cryptoImageList[6],
+                            fit: BoxFit.fitHeight),
+                      ),
                       height: 300,
                     ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
                       title: Text('Faça um Pix para o Mariguelinho.'),
-                      subtitle:
-                          Text('https://pt.wikipedia.org/wiki/Fascismo'),
+                      subtitle: Text('https://pt.wikipedia.org/wiki/Fascismo'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -447,10 +450,11 @@ class _CryptoHome extends State<CryptoHome> {
                                   child: GestureDetector(
                                     child: Hero(
                                       tag: 'imageHero',
-                                      child:
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(8.0),
-                                        child: Image.asset(cryptoImageList[13], fit: BoxFit.fitHeight),
+                                      child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[13],
+                                            fit: BoxFit.fitHeight),
                                       ),
                                     ),
                                     onTap: () => Navigator.pop(
@@ -474,8 +478,10 @@ class _CryptoHome extends State<CryptoHome> {
                                     child: Hero(
                                       tag: 'imageHero',
                                       child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(8.0),
-                                        child: Image.asset(cryptoImageList[13], fit: BoxFit.fitHeight),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                        child: Image.asset(cryptoImageList[13],
+                                            fit: BoxFit.fitHeight),
                                       ),
                                     ),
                                     onTap: () => Navigator.pop(

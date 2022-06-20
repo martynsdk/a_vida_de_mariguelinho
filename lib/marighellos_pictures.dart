@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
-
 
 class MarighellosPictures extends StatefulWidget {
   const MarighellosPictures({Key? key, required this.title}) : super(key: key);
@@ -11,24 +9,21 @@ class MarighellosPictures extends StatefulWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
+        secondaryHeaderColor: Colors.white,
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
       ),
-      home: const MarighellosPictures(title: 'Fotinhos do Marighella',),
+      home: const MarighellosPictures(title: 'Fotinhos do Marighella'),
     );
   }
-
 
   @override
   _MarighellosPictures createState() => _MarighellosPictures();
 }
 
 class _MarighellosPictures extends State<MarighellosPictures> {
-
-
   @override
   Widget build(BuildContext context) {
-
     final List<String> imageList = [
       'assets/images/mariguelinho_main_picture.jpg',
       'assets/images/mariguelinho1.jpg',
@@ -86,22 +81,19 @@ class _MarighellosPictures extends State<MarighellosPictures> {
       'assets/images/marighelinho53.jpg',
     ];
 
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
+        foregroundColor: Theme.of(context).secondaryHeaderColor,
         title: Text(widget.title),
         centerTitle: true,
       ),
-      //HOME
       body: Center(
         child: GridView.builder(
           itemCount: imageList.length,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3
-            //crossAxisSpacing: 5.0,
-            //mainAxisSpacing: 5.0,
-          ),
+          gridDelegate:
+              const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3
+                  ),
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
               child: Image.asset(imageList[index], fit: BoxFit.cover),
@@ -112,13 +104,12 @@ class _MarighellosPictures extends State<MarighellosPictures> {
                     return Dialog(
                       child: GestureDetector(
                         child: Hero(
-                          tag: 'imageHero',
-                          child:
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
-                            child: Image.asset(imageList[index], fit: BoxFit.fitHeight),
-                          )
-                        ),
+                            tag: 'imageHero',
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.asset(imageList[index],
+                                  fit: BoxFit.fitHeight),
+                            )),
                         onTap: () => Navigator.pop(
                           context,
                         ),
