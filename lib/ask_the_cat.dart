@@ -5,7 +5,6 @@ import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'dart:math';
 
-
 class AskTheCat extends StatefulWidget {
   const AskTheCat({Key? key}) : super(key: key);
 
@@ -20,12 +19,12 @@ class AskTheCat extends StatefulWidget {
       home: const AskTheCat(),
     );
   }
+
   @override
   _AskTheCatState createState() => _AskTheCatState();
 }
 
 class _AskTheCatState extends State<AskTheCat> {
-
   final Map<String, HighlightedWord> _highlights = {
     'vida': HighlightedWord(
       textStyle: const TextStyle(
@@ -82,7 +81,6 @@ class _AskTheCatState extends State<AskTheCat> {
     return x.floor();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,14 +98,10 @@ class _AskTheCatState extends State<AskTheCat> {
         duration: const Duration(milliseconds: 3000),
         repeatPauseDuration: const Duration(milliseconds: 100),
         repeat: true,
-        child: InkWell(
-          onLongPress: _listen,
-          child: FloatingActionButton(
-            onPressed: _listen,
-            child: Icon(_isListening ? Icons.mic : Icons.mic_none)
-          ),
+        child: FloatingActionButton(
+              onPressed: _listen,
+              child: Icon(_isListening ? Icons.mic : Icons.mic_none)),
 
-        ),
       ),
       body: SingleChildScrollView(
         reverse: true,
@@ -127,7 +121,6 @@ class _AskTheCatState extends State<AskTheCat> {
     );
   }
 
-
   void _listen() async {
     int a = randomGen(1, 15);
     setState(() => _isListening = false);
@@ -142,7 +135,9 @@ class _AskTheCatState extends State<AskTheCat> {
           listenFor: const Duration(seconds: 5),
           onResult: (val) => setState(() {
             _text = '${val.recognizedWords}?';
-            if (val.hasConfidenceRating && val.confidence > 0) {1.0 == val.confidence;}
+            if (val.hasConfidenceRating && val.confidence > 0) {
+              1.0 == val.confidence;
+            }
             audioPlayer.open(Audio('assets/audio/meow$a.mp3'));
             setState(() => _isListening = false);
           }),

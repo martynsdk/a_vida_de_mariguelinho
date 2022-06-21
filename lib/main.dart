@@ -315,7 +315,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SystemChrome.setPreferredOrientations(
                     [DeviceOrientation.portraitUp]);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const FunnyCatVideos();
+                  return const FunnyCatVideos(1);
                 }));
               },
               hoverColor: Colors.redAccent,
