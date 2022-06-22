@@ -41,12 +41,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
   void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+    setState(() {});
   }
 
   @override
@@ -108,7 +104,8 @@ class _MyHomePageState extends State<MyHomePage> {
       'assets/images/marighelinho53.jpg',
     ];
 
-    final Uri _url1 = Uri.parse('https://pt.wikipedia.org/wiki/Gato#:~:text=O%20gato%20(Felis%20silvestris%20catus,p%C3%A1ssaros%2C%20lagartixas%20e%20alguns%20insetos.');
+    final Uri _url1 = Uri.parse(
+        'https://pt.wikipedia.org/wiki/Gato#:~:text=O%20gato%20(Felis%20silvestris%20catus,p%C3%A1ssaros%2C%20lagartixas%20e%20alguns%20insetos.');
     void _launchUrl1() async {
       if (!await launchUrl(_url1)) throw 'Could not launch $_url1';
     }
@@ -117,8 +114,6 @@ class _MyHomePageState extends State<MyHomePage> {
     void _launchUrl2() async {
       if (!await launchUrl(_url2)) throw 'Could not launch $_url2';
     }
-
-
 
     return Scaffold(
       appBar: AppBar(
@@ -132,7 +127,6 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-
               Card(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -144,57 +138,49 @@ class _MyHomePageState extends State<MyHomePage> {
                     const ListTile(
                       leading: Icon(Icons.album),
                       title: Text('O gato mais doidão'),
-                      subtitle:
-                      Text('Incríveis peripécias e muito sono.'),
+                      subtitle: Text('Incríveis peripécias e muito sono.'),
                     ),
                   ],
                 ),
               ),
-
               Card(
                 margin: const EdgeInsets.all(15),
                 child: SizedBox(
                   //height: MediaQuery.of(context).size.height,
-                child: CarouselSlider.builder(
-                  itemCount: imageList.length,
-                  options: CarouselOptions(
-                    enlargeCenterPage: true,
-                    //height: MediaQuery.of(context).size.height,
-                    //height: 300,
-                    autoPlay: true,
-                    autoPlayInterval: const Duration(seconds: 3),
-                    reverse: false,
-                    aspectRatio: 1.0,
-                  ),
-                  itemBuilder: (context, i, id) {
-                    return GestureDetector(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.0)),
-                        //ClipRRect for image border radius
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.asset(
-                            imageList[i],
-                            fit: BoxFit.fitHeight,
-                            scale: 1.0
+                  child: CarouselSlider.builder(
+                    itemCount: imageList.length,
+                    options: CarouselOptions(
+                      enlargeCenterPage: true,
+                      //height: MediaQuery.of(context).size.height,
+                      //height: 300,
+                      autoPlay: true,
+                      autoPlayInterval: const Duration(seconds: 3),
+                      reverse: false,
+                      aspectRatio: 1.0,
+                    ),
+                    itemBuilder: (context, i, id) {
+                      return GestureDetector(
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0)),
+                          //ClipRRect for image border radius
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.asset(imageList[i],
+                                fit: BoxFit.fitHeight, scale: 1.0),
                           ),
                         ),
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
               ),
-              ),
-
               Card(
                   margin: const EdgeInsets.all(15),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset(imageList[1],fit: BoxFit.fitHeight),
-                  )
-              ),
-
+                    child: Image.asset(imageList[1], fit: BoxFit.fitHeight),
+                  )),
               Card(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -202,8 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     const ListTile(
                       leading: Icon(Icons.album),
                       title: Text('Mariguelinho'),
-                      subtitle:
-                      Text('Cuide bem de quem você ama.'),
+                      subtitle: Text('Cuide bem de quem você ama.'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -231,13 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-
-
-
-
-
-        drawer: Drawer(
-
+      drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
@@ -251,9 +230,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 backgroundColor: Colors.redAccent,
               ),
             ),
-
             ListTile(
-
               title: const Text('Pergunte ao Gato'),
               leading: const Icon(Icons.favorite),
               onTap: () {
@@ -267,7 +244,6 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               hoverColor: Colors.redAccent,
             ),
-
             ListTile(
               title: const Text('Fotinhas'),
               leading: const Icon(Icons.photo_album_rounded),
@@ -280,7 +256,6 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               hoverColor: Colors.redAccent,
             ),
-
             ListTile(
               title: const Text('Doe cripto'),
               leading: const Icon(Icons.wallet_membership),
@@ -293,7 +268,6 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               hoverColor: Colors.redAccent,
             ),
-
             ListTile(
               title: const Text('Videos de Gatinhos'),
               leading: const Icon(Icons.monitor_outlined),
@@ -306,7 +280,6 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               hoverColor: Colors.redAccent,
             ),
-
             ListTile(
               title: const Text('O Clube do Coração'),
               leading: const Icon(Icons.sports_soccer),
@@ -319,8 +292,6 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               hoverColor: Colors.redAccent,
             ),
-
-
             AvatarGlow(
               glowColor: Theme.of(context).primaryColor,
               endRadius: 100.0,
@@ -330,8 +301,10 @@ class _MyHomePageState extends State<MyHomePage> {
               child: FloatingActionButton(
                 //backgroundColor: Theme.of(context).primaryColor,
                 onPressed: _incrementCounter,
-                tooltip: "As flores são bonitas em qualquer lugar do mundo, muita gente tem forma mas não tem conteúdo.",
-                child: const Icon(Icons.favorite, size: 50, color: Colors.redAccent),
+                tooltip:
+                    "As flores são bonitas em qualquer lugar do mundo, muita gente tem forma mas não tem conteúdo.",
+                child: const Icon(Icons.favorite,
+                    size: 50, color: Colors.redAccent),
                 //child: Text('$_counter'),
               ),
             ),
