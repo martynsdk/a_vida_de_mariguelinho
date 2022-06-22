@@ -159,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   itemCount: imageList.length,
                   options: CarouselOptions(
                     enlargeCenterPage: true,
-                    height: MediaQuery.of(context).size.height,
+                    //height: MediaQuery.of(context).size.height,
                     //height: 300,
                     autoPlay: true,
                     autoPlayInterval: const Duration(seconds: 3),
@@ -170,13 +170,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     return GestureDetector(
                       child: Container(
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15)),
+                            borderRadius: BorderRadius.circular(8.0)),
                         //ClipRRect for image border radius
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
+                          borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset(
                             imageList[i],
-                            fit: BoxFit.cover,
+                            fit: BoxFit.fitHeight,
                             scale: 1.0
                           ),
                         ),
@@ -301,7 +301,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SystemChrome.setPreferredOrientations(
                     [DeviceOrientation.portraitUp]);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const FunnyCatVideos(1);
+                  return const FunnyCatVideos();
                 }));
               },
               hoverColor: Colors.redAccent,
@@ -328,11 +328,11 @@ class _MyHomePageState extends State<MyHomePage> {
               repeatPauseDuration: const Duration(milliseconds: 100),
               repeat: true,
               child: FloatingActionButton(
-                backgroundColor: Theme.of(context).primaryColor,
+                //backgroundColor: Theme.of(context).primaryColor,
                 onPressed: _incrementCounter,
                 tooltip: "As flores são bonitas em qualquer lugar do mundo, muita gente tem forma mas não tem conteúdo.",
-                //child: const Icon(Icons.favorite, size: 40,),
-                child: Text('$_counter'),
+                child: const Icon(Icons.favorite, size: 50, color: Colors.redAccent),
+                //child: Text('$_counter'),
               ),
             ),
           ],
