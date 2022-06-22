@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -107,6 +108,15 @@ class _MyHomePageState extends State<MyHomePage> {
       'assets/images/marighelinho53.jpg',
     ];
 
+    final Uri _url1 = Uri.parse('https://pt.wikipedia.org/wiki/Gato#:~:text=O%20gato%20(Felis%20silvestris%20catus,p%C3%A1ssaros%2C%20lagartixas%20e%20alguns%20insetos.');
+    void _launchUrl1() async {
+      if (!await launchUrl(_url1)) throw 'Could not launch $_url1';
+    }
+
+    final Uri _url2 = Uri.parse('https://pt.wikipedia.org/wiki/Fel%C3%ADdeos');
+    void _launchUrl2() async {
+      if (!await launchUrl(_url2)) throw 'Could not launch $_url2';
+    }
 
 
 
@@ -131,33 +141,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(imageList[0], fit: BoxFit.fill),
                     ),
-
-
                     const ListTile(
                       leading: Icon(Icons.album),
                       title: Text('O gato mais doidão'),
                       subtitle:
                       Text('Incríveis peripécias e muito sono.'),
-                    ),
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: <Widget>[
-                        TextButton(
-                          child: const Text('CLIQUE AQUI PARA NADA'),
-                          onPressed: () {
-                            /* ... */
-                          },
-                        ),
-                        const SizedBox(width: 8),
-                        TextButton(
-                          child: const Text('AQUI TAMBÉM'),
-                          onPressed: () {
-                            /* ... */
-                          },
-                        ),
-                        const SizedBox(width: 8),
-                      ],
                     ),
                   ],
                 ),
@@ -166,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Card(
                 margin: const EdgeInsets.all(15),
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height,
+                  //height: MediaQuery.of(context).size.height,
                 child: CarouselSlider.builder(
                   itemCount: imageList.length,
                   options: CarouselOptions(
@@ -207,8 +195,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   )
               ),
 
-
-
               Card(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -217,22 +203,22 @@ class _MyHomePageState extends State<MyHomePage> {
                       leading: Icon(Icons.album),
                       title: Text('Mariguelinho'),
                       subtitle:
-                      Text('O que você faria se soubesse que não iria falhar?'),
+                      Text('Cuide bem de quem você ama.'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         TextButton(
-                          child: const Text('NADA'),
+                          child: const Text('Gatos'),
                           onPressed: () {
-                            /* ... */
+                            _launchUrl1();
                           },
                         ),
                         const SizedBox(width: 8),
                         TextButton(
-                          child: const Text('ABSOLUTAMENTE NADA'),
+                          child: const Text('Felídeos'),
                           onPressed: () {
-                            /* ... */
+                            _launchUrl2();
                           },
                         ),
                         const SizedBox(width: 8),

@@ -30,36 +30,42 @@ class _AskTheCatState extends State<AskTheCat> {
       textStyle: const TextStyle(
         color: Colors.blue,
         fontWeight: FontWeight.bold,
+          fontSize: 50
       ),
     ),
     'maconha': HighlightedWord(
       textStyle: const TextStyle(
         color: Colors.greenAccent,
         fontWeight: FontWeight.bold,
+          fontSize: 50
       ),
     ),
     'por que': HighlightedWord(
       textStyle: const TextStyle(
         color: Colors.red,
         fontWeight: FontWeight.bold,
+          fontSize: 50
       ),
     ),
     'deus': HighlightedWord(
       textStyle: const TextStyle(
         color: Colors.green,
         fontWeight: FontWeight.bold,
+          fontSize: 50
       ),
     ),
     'aqui': HighlightedWord(
       textStyle: const TextStyle(
         color: Colors.pink,
         fontWeight: FontWeight.bold,
+        fontSize: 50,
       ),
     ),
     'quando': HighlightedWord(
       textStyle: const TextStyle(
         color: Colors.brown,
         fontWeight: FontWeight.bold,
+        fontSize: 50
       ),
     ),
   };
@@ -100,6 +106,7 @@ class _AskTheCatState extends State<AskTheCat> {
         repeat: true,
         child: FloatingActionButton(
               onPressed: _listen,
+            tooltip: "Aperte o botão uma vez e fale...",
               child: Icon(_isListening ? Icons.mic : Icons.mic_none)),
 
       ),
@@ -138,8 +145,11 @@ class _AskTheCatState extends State<AskTheCat> {
             if (val.hasConfidenceRating && val.confidence > 0) {
               1.0 == val.confidence;
             }
-            audioPlayer.open(Audio('assets/audio/meow$a.mp3'));
-            setState(() => _isListening = false);
+            if(_text.length > 3){
+              audioPlayer.open(Audio('assets/audio/meow$a.mp3'));
+              setState(() => _isListening = false);
+            }
+
           }),
         );
       }
