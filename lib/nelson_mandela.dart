@@ -6,7 +6,7 @@ class NelsonMandela extends StatefulWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'A Picture of Nelson Mandela',
+      title: 'Uma foto de Nelson Mandela',
       theme: ThemeData(
         primaryColor: Colors.redAccent,
         useMaterial3: true,
@@ -20,11 +20,7 @@ class NelsonMandela extends StatefulWidget {
   _NelsonMandela createState() => _NelsonMandela();
 }
 
-
-
-class _NelsonMandela extends State<NelsonMandela>{
-
-
+class _NelsonMandela extends State<NelsonMandela> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,8 +30,11 @@ class _NelsonMandela extends State<NelsonMandela>{
         title: const Text('Nelson Mandela'),
         centerTitle: true,
       ),
-      body: Image.asset('assets/images/mariguelinho_main_picture.jpg',fit: BoxFit.fitHeight,),
+      body: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        child: Image.asset('assets/images/nelsonmandela.jpg', fit: BoxFit.fitHeight,),
+      )
+      //Image.asset('assets/images/mariguelinho_main_picture.jpg', fit: BoxFit.fitHeight,),
     );
   }
-
 }

@@ -244,7 +244,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ListTile(
               title: const Text('Pergunte ao Marighella'),
-              leading: const Icon(Icons.favorite),
+              leading: const Icon(Icons.mic),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const AskTheCat();
@@ -320,7 +320,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ListTile(
               title: const Text('Nelson Mandela'),
-              leading: const Icon(Icons.sports_soccer),
+              leading: const Icon(Icons.favorite),
               onTap: () {
                 SystemChrome.setPreferredOrientations(
                     [DeviceOrientation.portraitUp]);
