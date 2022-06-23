@@ -2,6 +2,7 @@ import 'package:a_vida_de_mariguelinho/about_me.dart';
 import 'package:a_vida_de_mariguelinho/ask_the_cat.dart';
 import 'package:a_vida_de_mariguelinho/funny_cat_videos.dart';
 import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
+import 'package:a_vida_de_mariguelinho/nelson_mandela.dart';
 import 'package:a_vida_de_mariguelinho/soccer_team.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/services.dart';
@@ -178,7 +179,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           //ClipRRect for image border radius
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
-                            child: Image.asset(imageList[i], fit: BoxFit.fitHeight, scale: 1.0)
+                            child: Image.asset(imageList[i], fit: BoxFit.fitHeight)
                           ),
                         ),
                       );
@@ -313,6 +314,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     [DeviceOrientation.portraitUp]);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const SoccerTeam();
+                }));
+              },
+              hoverColor: Colors.redAccent,
+            ),
+            ListTile(
+              title: const Text('Nelson Mandela'),
+              leading: const Icon(Icons.sports_soccer),
+              onTap: () {
+                SystemChrome.setPreferredOrientations(
+                    [DeviceOrientation.portraitUp]);
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const NelsonMandela();
                 }));
               },
               hoverColor: Colors.redAccent,
