@@ -1,3 +1,4 @@
+import 'package:a_vida_de_mariguelinho/about_me.dart';
 import 'package:a_vida_de_mariguelinho/ask_the_cat.dart';
 import 'package:a_vida_de_mariguelinho/funny_cat_videos.dart';
 import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
@@ -8,6 +9,7 @@ import 'crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,9 +43,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void _incrementCounter() {
-    setState(() {});
-  }
+
+
+  AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -104,6 +108,8 @@ class _MyHomePageState extends State<MyHomePage> {
       'assets/images/marighelinho53.jpg',
     ];
 
+
+
     final Uri _url1 = Uri.parse(
         'https://pt.wikipedia.org/wiki/Gato#:~:text=O%20gato%20(Felis%20silvestris%20catus,p%C3%A1ssaros%2C%20lagartixas%20e%20alguns%20insetos.');
     void _launchUrl1() async {
@@ -127,10 +133,16 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+
               Card(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
+                    const ListTile(
+                      title: Center(child: Text('Sejam todxs muito bem-vindxs!'),),
+                      //title: Text('Sejam muito bem-vindxs!'),
+                      subtitle: Center(child: Text('Eu sou o Mariguelinho, use o menu para conhecer mais sobre mim.'))
+                    ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(imageList[0], fit: BoxFit.fill),
@@ -231,11 +243,25 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ListTile(
-              title: const Text('Pergunte ao Gato'),
+              title: const Text('Pergunte ao Marighella'),
               leading: const Icon(Icons.favorite),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const AskTheCat();
+                }));
+                // Update the state of the app.
+                SystemChrome.setPreferredOrientations(
+                    [DeviceOrientation.portraitUp]);
+                // ...
+              },
+              hoverColor: Colors.redAccent,
+            ),
+            ListTile(
+              title: const Text('Sobre mim'),
+              leading: const Icon(Icons.history_edu),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const AboutMe();
                 }));
                 // Update the state of the app.
                 SystemChrome.setPreferredOrientations(
@@ -300,7 +326,7 @@ class _MyHomePageState extends State<MyHomePage> {
               repeat: true,
               child: FloatingActionButton(
                 //backgroundColor: Theme.of(context).primaryColor,
-                onPressed: _incrementCounter,
+                onPressed: () => audioPlayer.open(Audio('assets/audio/beatheart.mp3')),
                 tooltip:
                     "As flores são bonitas em qualquer lugar do mundo, muita gente tem forma mas não tem conteúdo.",
                 child: const Icon(Icons.favorite,

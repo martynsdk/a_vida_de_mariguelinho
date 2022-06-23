@@ -42,7 +42,6 @@ YoutubePlayerController _controller = YoutubePlayerController(
       enableKeyboard: true,
       enableCaption: true,
       startAt: Duration(seconds: 0),
-      autoPlay: true,
       useHybridComposition: true),
 );
 

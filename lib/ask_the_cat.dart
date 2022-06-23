@@ -68,6 +68,34 @@ class _AskTheCatState extends State<AskTheCat> {
         fontSize: 50
       ),
     ),
+    'gosta': HighlightedWord(
+      textStyle: const TextStyle(
+          color: Colors.brown,
+          fontWeight: FontWeight.bold,
+          fontSize: 50
+      ),
+    ),
+    'quer': HighlightedWord(
+      textStyle: const TextStyle(
+          color: Colors.brown,
+          fontWeight: FontWeight.bold,
+          fontSize: 50
+      ),
+    ),
+    'mia': HighlightedWord(
+      textStyle: const TextStyle(
+          color: Colors.brown,
+          fontWeight: FontWeight.bold,
+          fontSize: 50
+      ),
+    ),
+    'miau': HighlightedWord(
+      textStyle: const TextStyle(
+          color: Colors.brown,
+          fontWeight: FontWeight.bold,
+          fontSize: 50
+      ),
+    ),
   };
 
   stt.SpeechToText _speech = stt.SpeechToText();
@@ -93,7 +121,7 @@ class _AskTheCatState extends State<AskTheCat> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         foregroundColor: Theme.of(context).secondaryHeaderColor,
-        title: const Text('Pergunte ao Gato'),
+        title: const Text('Pergunte ao Marighella'),
         centerTitle: true,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

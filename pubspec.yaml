@@ -72,7 +72,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-      - assets/images/heart.png
+      - assets/images/mangrove.jpg
       - assets/images/mariguelinho_main_picture.jpg
       - assets/images/mariguelinho1.jpg
       - assets/images/marighelinho2.jpg
@@ -143,6 +143,8 @@ flutter:
       - assets/images/crypto_home/cardano_qrcode.png
       - assets/images/crypto_home/pix_qrcode.png
       - assets/images/sport_club_internacional/sportclubinternacional1.gif
+      - assets/images/sport_club_internacional/sportclubinternacional2.jpg
+      - assets/audio/beatheart.mp3
       - assets/audio/meow1.mp3
       - assets/audio/meow2.mp3
       - assets/audio/meow3.mp3
@@ -158,6 +160,16 @@ flutter:
       - assets/audio/meow13.mp3
       - assets/audio/meow14.mp3
       - assets/audio/meow15.mp3
+      - assets/audio/meow16.mp3
+      - assets/audio/meow17.mp3
+      - assets/audio/meow18.mp3
+      - assets/audio/meow19.mp3
+      - assets/audio/meow20.mp3
+      - assets/audio/meow21.mp3
+      - assets/audio/meow22.mp3
+      - assets/audio/meow23.mp3
+      - assets/audio/meow24.mp3
+      - assets/audio/meow25.mp3
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific 'variants", see
