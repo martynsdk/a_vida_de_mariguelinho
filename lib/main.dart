@@ -178,8 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           //ClipRRect for image border radius
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
-                            //child: Image.asset(imageList[i], fit: BoxFit.fitHeight, scale: 1.0),
-                            child: Image(image: AssetImage(imageList[i]), fit: BoxFit.fitHeight)
+                            child: Image.asset(imageList[i], fit: BoxFit.fitHeight, scale: 1.0)
                           ),
                         ),
                       );

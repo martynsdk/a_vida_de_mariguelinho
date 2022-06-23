@@ -31,7 +31,7 @@ void _launchUrl2() async {
   if (!await launchUrl(_url2)) throw 'Could not launch $_url2';
 }
 
-final Uri _url3 = Uri.parse('https://estadiobeirario.com.br/');
+final Uri _url3 = Uri.parse('https://www.estadiobeirario.com.br/');
 void _launchUrl3() async {
   if (!await launchUrl(_url3)) throw 'Could not launch $_url3';
 }
