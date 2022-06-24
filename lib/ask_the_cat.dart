@@ -1,6 +1,8 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:highlight_text/highlight_text.dart';
+import 'package:localization/localization.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'dart:math';
@@ -8,8 +10,23 @@ import 'dart:math';
 class AskTheCat extends StatefulWidget {
   const AskTheCat({Key? key}) : super(key: key);
 
+
+
   Widget build(BuildContext context) {
+
+    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
+
     return MaterialApp(
+
+      localizationsDelegates: [
+        // delegate from flutter_localization
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        // delegate from localization package.
+        LocalJsonLocalization.delegate,
+      ],
+
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
@@ -100,7 +117,7 @@ class _AskTheCatState extends State<AskTheCat> {
 
   stt.SpeechToText _speech = stt.SpeechToText();
   bool _isListening = false;
-  String _text = 'Faça uma pergunta e terá uma resposta';
+  String _text = "aks-get-answer".i18n();
 
   @override
   void initState() {
@@ -121,7 +138,7 @@ class _AskTheCatState extends State<AskTheCat> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         foregroundColor: Theme.of(context).secondaryHeaderColor,
-        title: const Text('Pergunte ao Marighella'),
+        title: Text("ask-marighella".i18n()),
         centerTitle: true,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -134,7 +151,7 @@ class _AskTheCatState extends State<AskTheCat> {
         repeat: true,
         child: FloatingActionButton(
               onPressed: _listen,
-            tooltip: "Aperte o botão uma vez e fale...",
+            tooltip: "click-once-ask-questions".i18n(),
               child: Icon(_isListening ? Icons.mic : Icons.mic_none)),
 
       ),

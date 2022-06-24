@@ -1,34 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:localization/localization.dart';
 import 'ask_the_cat.dart';
 
-class AboutMe extends StatefulWidget {
-  const AboutMe({Key? key}) : super(key: key);
+class AboutHim extends StatefulWidget {
+  const AboutHim({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
+
+    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
+
     return MaterialApp(
+      localizationsDelegates: [
+        // delegate from flutter_localization
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        // delegate from localization package.
+        LocalJsonLocalization.delegate,
+      ],
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
       ),
-      home: const AboutMe(),
+      home: const AboutHim(),
     );
   }
 
   @override
-  _AboutMe createState() => _AboutMe();
+  _AboutHim createState() => _AboutHim();
 }
 
-class _AboutMe extends State<AboutMe> {
+class _AboutHim extends State<AboutHim> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         foregroundColor: Theme.of(context).secondaryHeaderColor,
-        title: const Text('Sobre mim'),
+        title: Text("about-him".i18n()),
         centerTitle: true,
       ),
       body: Column(
@@ -57,10 +70,10 @@ class _AboutMe extends State<AboutMe> {
           const SizedBox(
             height: 50,
           ),
-          const ListTile(
-            title: Center(child: Text('Enzo Marighella')),
+          ListTile(
+            title: Center(child: Text("enzo-marighella".i18n())),
             subtitle: Center(
-                child: Text('Pressione o botão abaixo e faça perguntas')),
+                child: Text("press-button-ask-questions".i18n())),
           ),
           //BUTTONS
           FloatingActionButton(
@@ -72,12 +85,12 @@ class _AboutMe extends State<AboutMe> {
               SystemChrome.setPreferredOrientations(
                   [DeviceOrientation.portraitUp]);
             },
-            tooltip: "Clique e faça perguntas para mim",
+            tooltip: "click-once-ask-questions".i18n(),
             child: const Icon(Icons.mic),
           ),
-          const ListTile(
-            title: Text('Sobre mim'),
-            subtitle: Text('Pois é, gentx. Essa é minha história.'),
+          ListTile(
+            title: Text("about-him".i18n()),
+            subtitle: Text("marighellas-history".i18n()),
           ),
         ],
       ),

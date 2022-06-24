@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:localization/localization.dart';
 
 final List<String> cryptoImageList = [
   'assets/images/crypto_home/dogecoin_logo.png',
@@ -23,14 +25,27 @@ class CryptoHome extends StatefulWidget {
   final String title;
 
   Widget build(BuildContext context) {
+
+    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
+
     return MaterialApp(
+
+      localizationsDelegates: [
+        // delegate from flutter_localization
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        // delegate from localization package.
+        LocalJsonLocalization.delegate,
+      ],
+
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
       ),
-      home: const CryptoHome(title: 'Doe cripto'),
+      home: CryptoHome(title: "donate-crypto".i18n()),
     );
   }
 
@@ -66,7 +81,7 @@ class _CryptoHome extends State<CryptoHome> {
                     ),
                     const ListTile(
                       leading: Icon(Icons.monetization_on),
-                      title: Text('Doe Bitcoins para o Mariguelinho'),
+                      title: Text(''),
                       subtitle:
                           Text('Carteira: 3Gbfxu3FUvi4dTLu2roSRvg8ZJXzNyEcQT'),
                     ),

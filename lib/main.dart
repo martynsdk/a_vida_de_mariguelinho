@@ -1,4 +1,4 @@
-import 'package:a_vida_de_mariguelinho/about_me.dart';
+import 'package:a_vida_de_mariguelinho/about_him.dart';
 import 'package:a_vida_de_mariguelinho/ask_the_cat.dart';
 import 'package:a_vida_de_mariguelinho/funny_cat_videos.dart';
 import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
@@ -6,6 +6,8 @@ import 'package:a_vida_de_mariguelinho/nelson_mandela.dart';
 import 'package:a_vida_de_mariguelinho/soccer_team.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:localization/localization.dart';
 import 'crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -21,9 +23,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
+
     return MaterialApp(
+      localizationsDelegates: [
+        // delegate from flutter_localization
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        // delegate from localization package.
+        LocalJsonLocalization.delegate,
+      ],
       debugShowCheckedModeBanner: false,
-      title: 'A vida de Mariguelinho',
+      title: 'title-text'.i18n(),
       theme: ThemeData(
         primaryColor: Colors.redAccent,
         useMaterial3: true,
@@ -126,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         foregroundColor: Theme.of(context).secondaryHeaderColor,
-        title: Text(widget.title),
+        title: Text('title-text'.i18n()),
         centerTitle: true,
       ),
       body: Center(
@@ -139,19 +152,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    const ListTile(
-                      title: Center(child: Text('Sejam todxs muito bem-vindxs!'),),
+                     ListTile(
+                      title: Center(child:
+                      Text("welcome-text".i18n()),
+                      ),
                       //title: Text('Sejam muito bem-vindxs!'),
-                      subtitle: Center(child: Text('Eu sou o Mariguelinho, use o menu para conhecer mais sobre mim.'))
+                      subtitle: Center(child: Text("im-mariguelinho".i18n()))
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(imageList[0], fit: BoxFit.fill),
                     ),
-                    const ListTile(
-                      leading: Icon(Icons.album),
-                      title: Text('O gato mais doidão'),
-                      subtitle: Text('Incríveis peripécias e muito sono.'),
+                    ListTile(
+                      leading: const Icon(Icons.album),
+                      title: Text("the-insanecat".i18n()),
+                      subtitle: Text("incredible-shenanigans".i18n()),
                     ),
                   ],
                 ),
@@ -197,23 +212,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    const ListTile(
-                      leading: Icon(Icons.album),
-                      title: Text('Mariguelinho'),
-                      subtitle: Text('Cuide bem de quem você ama.'),
+                    ListTile(
+                      leading: const Icon(Icons.album),
+                      title: Text("Mariguelinho".i18n()),
+                      subtitle: Text("take-care-of-love".i18n()),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         TextButton(
-                          child: const Text('Gatos'),
+                          child: Text("cats".i18n()),
                           onPressed: () {
                             _launchUrl1();
                           },
                         ),
                         const SizedBox(width: 8),
                         TextButton(
-                          child: const Text('Felídeos'),
+                          child: Text("felids".i18n()),
                           onPressed: () {
                             _launchUrl2();
                           },
@@ -232,10 +247,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            const UserAccountsDrawerHeader(
-              accountName: Text("Enzo Marighella"),
-              accountEmail: Text("marighella@batmandocarianos.com"),
-              currentAccountPicture: CircleAvatar(
+            UserAccountsDrawerHeader(
+              accountName: Text("enzo-marighella".i18n()),
+              accountEmail: const Text("marighella@batmandocarianos.com"),
+              currentAccountPicture: const CircleAvatar(
                 radius: 30.0,
                 backgroundImage:
                     AssetImage('assets/images/mariguelinho_main_picture.jpg'),
@@ -243,7 +258,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ListTile(
-              title: const Text('Pergunte ao Marighella'),
+              title: Text("ask-marighella".i18n()),
               leading: const Icon(Icons.mic),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -257,11 +272,11 @@ class _MyHomePageState extends State<MyHomePage> {
               hoverColor: Colors.redAccent,
             ),
             ListTile(
-              title: const Text('Sobre mim'),
+              title: Text("about-him".i18n()),
               leading: const Icon(Icons.history_edu),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const AboutMe();
+                  return const AboutHim();
                 }));
                 // Update the state of the app.
                 SystemChrome.setPreferredOrientations(
@@ -271,31 +286,31 @@ class _MyHomePageState extends State<MyHomePage> {
               hoverColor: Colors.redAccent,
             ),
             ListTile(
-              title: const Text('Fotinhas'),
+              title: Text("pics".i18n()),
               leading: const Icon(Icons.photo_album_rounded),
               onTap: () {
                 SystemChrome.setPreferredOrientations(
                     [DeviceOrientation.portraitUp]);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const MarighellosPictures(title: 'Fotinhas');
+                  return MarighellosPictures(title: "pics".i18n());
                 }));
               },
               hoverColor: Colors.redAccent,
             ),
             ListTile(
-              title: const Text('Doe cripto'),
+              title: Text("donate-crypto".i18n()),
               leading: const Icon(Icons.wallet_membership),
               onTap: () {
                 SystemChrome.setPreferredOrientations(
                     [DeviceOrientation.portraitUp]);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const CryptoHome(title: 'Doe cripto');
+                  return CryptoHome(title: "donate-crypto".i18n());
                 }));
               },
               hoverColor: Colors.redAccent,
             ),
             ListTile(
-              title: const Text('Videos de Gatinhos'),
+              title: Text("kitten-videos".i18n()),
               leading: const Icon(Icons.monitor_outlined),
               onTap: () {
                 SystemChrome.setPreferredOrientations(
@@ -307,7 +322,7 @@ class _MyHomePageState extends State<MyHomePage> {
               hoverColor: Colors.redAccent,
             ),
             ListTile(
-              title: const Text('O Clube do Coração'),
+              title: Text("favorite-soccer-team".i18n()),
               leading: const Icon(Icons.sports_soccer),
               onTap: () {
                 SystemChrome.setPreferredOrientations(
@@ -340,7 +355,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 //backgroundColor: Theme.of(context).primaryColor,
                 onPressed: () => audioPlayer.open(Audio('assets/audio/beatheart.mp3')),
                 tooltip:
-                    "As flores são bonitas em qualquer lugar do mundo, muita gente tem forma mas não tem conteúdo.",
+                "strong-heart".i18n(),
                 child: const Icon(Icons.favorite,
                     size: 50, color: Colors.redAccent),
                 //child: Text('$_counter'),
