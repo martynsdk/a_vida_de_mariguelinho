@@ -12,7 +12,7 @@
    <application
 
         android:label="a_vida_de_mariguelinho"
-       android:name="${applicationName}"
+        android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"

@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         LocalJsonLocalization.delegate,
       ],
       debugShowCheckedModeBanner: false,
-      title: 'title-text'.i18n(),
+      title: "mariguelinhos-life".i18n(),
       theme: ThemeData(
         primaryColor: Colors.redAccent,
         useMaterial3: true,
