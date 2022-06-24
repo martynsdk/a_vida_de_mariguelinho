@@ -25,7 +25,7 @@
   "press-button-ask-questions": "Pressione o botão abaixo e faça perguntas...",
   "click-once-ask-questions": "Clique uma vez e faça perguntas para mim",
   "marighellas-history": "Pois é, gentx. Essa é minha história",
-  "aks-get-answer": "Faça uma pergunta e terá uma resposta",
+  "aks-get-answer": "Faça uma pergunta e terá a resposta que procuras",
   "give-bitcoins": "Doe Bitcoins para o Mariguelinho",
   "give-ethereum": "Doe Ethereum para o Mariguelinho",
   "give-shibainu": "Doe ShibaInu para o Mariguelinho",
@@ -34,5 +34,16 @@
   "give-cardano": "Doe Cardano para o Mariguelinho",
   "make-a-brazilian-pix": "Faça um Pix para o Mariguelinho",
   "wallet": "Carteira",
-  "picture-of-nelson-mandela": "Uma Foto do Nelson Mandela"
+  "picture-of-nelson-mandela": "Uma Foto do Nelson Mandela",
+  "life": "vida",
+  "marijuana": "maconha",
+  "why": "por que",
+  "god": "deus",
+  "here": "aqui",
+  "when": "quando",
+  "want": "quer",
+  "like": "gosta",
+  "meows": "mia",
+  "meow": "miau",
+  "cat": "gato"
 }

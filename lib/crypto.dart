@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:localization/localization.dart';
 
 final List<String> cryptoImageList = [
@@ -25,20 +24,7 @@ class CryptoHome extends StatefulWidget {
   final String title;
 
   Widget build(BuildContext context) {
-
-    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
-
     return MaterialApp(
-
-      localizationsDelegates: [
-        // delegate from flutter_localization
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        // delegate from localization package.
-        LocalJsonLocalization.delegate,
-      ],
-
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
@@ -82,8 +68,8 @@ class _CryptoHome extends State<CryptoHome> {
                     ListTile(
                       leading: const Icon(Icons.monetization_on),
                       title: Text("give-bitcoins".i18n()),
-                      subtitle:
-                          Text('${"wallet".i18n()}: 3Gbfxu3FUvi4dTLu2roSRvg8ZJXzNyEcQT'),
+                      subtitle: Text(
+                          '${"wallet".i18n()}: 3Gbfxu3FUvi4dTLu2roSRvg8ZJXzNyEcQT'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -204,8 +190,8 @@ class _CryptoHome extends State<CryptoHome> {
                     ListTile(
                       leading: const Icon(Icons.monetization_on),
                       title: Text("give-dogecoin".i18n()),
-                      subtitle:
-                          Text('${"wallet".i18n()}: DR6gZSRvKmKNpREMnUVTm5GF6ZAyCcw3YM'),
+                      subtitle: Text(
+                          '${"wallet".i18n()}: DR6gZSRvKmKNpREMnUVTm5GF6ZAyCcw3YM'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -450,7 +436,8 @@ class _CryptoHome extends State<CryptoHome> {
                     ListTile(
                       leading: const Icon(Icons.monetization_on),
                       title: Text("make-a-brazilian-pix".i18n()),
-                      subtitle: const Text('https://pt.wikipedia.org/wiki/Fascismo'),
+                      subtitle:
+                          const Text('https://pt.wikipedia.org/wiki/Fascismo'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,

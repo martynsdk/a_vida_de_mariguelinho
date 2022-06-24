@@ -28,7 +28,7 @@ class _NelsonMandela extends State<NelsonMandela> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         foregroundColor: Theme.of(context).secondaryHeaderColor,
-        title: const Text('Nelson Mandela'),
+        title: const Text('Sir. Nelson Mandela'),
         centerTitle: true,
       ),
       body: SizedBox(

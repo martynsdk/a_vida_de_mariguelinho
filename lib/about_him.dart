@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:localization/localization.dart';
 import 'ask_the_cat.dart';
 
@@ -9,17 +8,7 @@ class AboutHim extends StatefulWidget {
 
   Widget build(BuildContext context) {
 
-    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
-
     return MaterialApp(
-      localizationsDelegates: [
-        // delegate from flutter_localization
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        // delegate from localization package.
-        LocalJsonLocalization.delegate,
-      ],
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,

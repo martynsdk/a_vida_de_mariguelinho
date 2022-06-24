@@ -1,6 +1,5 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:localization/localization.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
@@ -10,23 +9,8 @@ import 'dart:math';
 class AskTheCat extends StatefulWidget {
   const AskTheCat({Key? key}) : super(key: key);
 
-
-
   Widget build(BuildContext context) {
-
-    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
-
     return MaterialApp(
-
-      localizationsDelegates: [
-        // delegate from flutter_localization
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        // delegate from localization package.
-        LocalJsonLocalization.delegate,
-      ],
-
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
@@ -43,75 +27,52 @@ class AskTheCat extends StatefulWidget {
 
 class _AskTheCatState extends State<AskTheCat> {
   final Map<String, HighlightedWord> _highlights = {
-    'vida': HighlightedWord(
+    "life".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-        color: Colors.blue,
-        fontWeight: FontWeight.bold,
-          fontSize: 50
-      ),
+          color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 50),
     ),
-    'maconha': HighlightedWord(
+    "marijuana".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-        color: Colors.greenAccent,
-        fontWeight: FontWeight.bold,
-          fontSize: 50
-      ),
+          color: Colors.greenAccent, fontWeight: FontWeight.bold, fontSize: 50),
     ),
-    'por que': HighlightedWord(
+    "why".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-        color: Colors.red,
-        fontWeight: FontWeight.bold,
-          fontSize: 50
-      ),
+          color: Colors.red, fontWeight: FontWeight.bold, fontSize: 50),
     ),
-    'deus': HighlightedWord(
+    "god".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-        color: Colors.green,
-        fontWeight: FontWeight.bold,
-          fontSize: 50
-      ),
+          color: Colors.green, fontWeight: FontWeight.bold, fontSize: 50),
     ),
-    'aqui': HighlightedWord(
+    "here".i18n(): HighlightedWord(
       textStyle: const TextStyle(
         color: Colors.pink,
         fontWeight: FontWeight.bold,
         fontSize: 50,
       ),
     ),
-    'quando': HighlightedWord(
+    "when".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-        color: Colors.brown,
-        fontWeight: FontWeight.bold,
-        fontSize: 50
-      ),
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
     ),
-    'gosta': HighlightedWord(
+    "like".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.brown,
-          fontWeight: FontWeight.bold,
-          fontSize: 50
-      ),
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
     ),
-    'quer': HighlightedWord(
+    "want".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.brown,
-          fontWeight: FontWeight.bold,
-          fontSize: 50
-      ),
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
     ),
-    'mia': HighlightedWord(
+    "meows".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.brown,
-          fontWeight: FontWeight.bold,
-          fontSize: 50
-      ),
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
     ),
-    'miau': HighlightedWord(
+    "meow".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.brown,
-          fontWeight: FontWeight.bold,
-          fontSize: 50
-      ),
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
+    ),
+    "cat".i18n(): HighlightedWord(
+      textStyle: const TextStyle(
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
     ),
   };
 
@@ -150,22 +111,23 @@ class _AskTheCatState extends State<AskTheCat> {
         repeatPauseDuration: const Duration(milliseconds: 100),
         repeat: true,
         child: FloatingActionButton(
-              onPressed: _listen,
+            onPressed: _listen,
             tooltip: "click-once-ask-questions".i18n(),
-              child: Icon(_isListening ? Icons.mic : Icons.mic_none)),
-
+            child: Icon(_isListening ? Icons.mic : Icons.mic_none)),
       ),
       body: SingleChildScrollView(
         reverse: true,
         child: Container(
           padding: const EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 150.0),
-          child: TextHighlight(
-            text: _text,
-            words: _highlights,
-            textStyle: const TextStyle(
-              fontSize: 32.0,
-              color: Colors.black,
-              fontWeight: FontWeight.w400,
+          child: Center(
+            child: TextHighlight(
+              text: _text,
+              words: _highlights,
+              textStyle: const TextStyle(
+                fontSize: 32.0,
+                color: Colors.black,
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ),
         ),
@@ -178,8 +140,8 @@ class _AskTheCatState extends State<AskTheCat> {
     setState(() => _isListening = false);
     if (!_isListening) {
       bool available = await _speech.initialize(
-        onStatus: (val) => print('onStatus: $val'),
-        onError: (val) => print('onError: $val'),
+        //onStatus: (val) => print('onStatus: $val'),
+        //onError: (val) => print('onError: $val'),
       );
       if (available) {
         setState(() => _isListening = true);
@@ -190,11 +152,10 @@ class _AskTheCatState extends State<AskTheCat> {
             if (val.hasConfidenceRating && val.confidence > 0) {
               1.0 == val.confidence;
             }
-            if(_text.length > 3){
+            if (_text.length > 3) {
               audioPlayer.open(Audio('assets/audio/meow$a.mp3'));
               setState(() => _isListening = false);
             }
-
           }),
         );
       }

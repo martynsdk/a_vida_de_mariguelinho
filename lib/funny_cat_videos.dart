@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:localization/localization.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
@@ -7,20 +6,7 @@ class FunnyCatVideos extends StatefulWidget {
   const FunnyCatVideos({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
-
-    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
-
     return MaterialApp(
-
-      localizationsDelegates: [
-        // delegate from flutter_localization
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        // delegate from localization package.
-        LocalJsonLocalization.delegate,
-      ],
-
       debugShowCheckedModeBanner: false,
       title: "title-text".i18n(),
       theme: ThemeData(

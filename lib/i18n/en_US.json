@@ -25,7 +25,7 @@
   "press-button-ask-questions": "Press the Button and Ask Me Questions...",
   "click-once-ask-questions": "Click Once and Ask Questions",
   "marighellas-history": "That's all folks",
-  "aks-get-answer": "Ask a Question and you'll get an Answer",
+  "aks-get-answer": "Ask a Question and you'll get the Answer you are looking for",
   "give-bitcoins": "Give some Bitcoins to Marighellinho",
   "give-ethereum": "Give some Ethereum to Mariguelinho",
   "give-shibainu": "Give some ShibaInu to Mariguelinho",
@@ -34,5 +34,16 @@
   "give-cardano": "Give some Cardano to Mariguelinho",
   "make-a-brazilian-pix": "Transfer some Brazilian Money to Mariguelinho",
   "wallet": "Wallet",
-  "picture-of-nelson-mandela": "Just a Picture of Nelson Mandela"
+  "picture-of-nelson-mandela": "Just a Picture of Nelson Mandela",
+  "life": "life",
+  "marijuana": "marijuana",
+  "why": "why",
+  "god": "god",
+  "here": "here",
+  "when": "when",
+  "want": "want",
+  "like": "like",
+  "meows": "meows",
+  "meow": "meow",
+  "cat": "cat"
 }
