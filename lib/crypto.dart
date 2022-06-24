@@ -141,7 +141,7 @@ class _CryptoHome extends State<CryptoHome> {
                     ),
                     ListTile(
                       leading: const Icon(Icons.monetization_on),
-                      title: Text('Doe Ethereum para o Mariguelinho'),
+                      title: Text("give-ethereum".i18n()),
                       subtitle: Text(
                           '${"wallet".i18n()}: 0x209f457f3d996fe12f4b3B82667Cd1e1ccdd1C2C'),
                     ),
@@ -202,8 +202,8 @@ class _CryptoHome extends State<CryptoHome> {
                       height: 300,
                     ),
                     ListTile(
-                      leading: Icon(Icons.monetization_on),
-                      title: Text('Doe DogeCoin para o Mariguelinho'),
+                      leading: const Icon(Icons.monetization_on),
+                      title: Text("give-dogecoin".i18n()),
                       subtitle:
                           Text('${"wallet".i18n()}: DR6gZSRvKmKNpREMnUVTm5GF6ZAyCcw3YM'),
                     ),
@@ -262,8 +262,8 @@ class _CryptoHome extends State<CryptoHome> {
                       height: 300,
                     ),
                     ListTile(
-                      leading: Icon(Icons.monetization_on),
-                      title: Text('Doe ShibaInu para o Mariguelinho'),
+                      leading: const Icon(Icons.monetization_on),
+                      title: Text("give-shibainu".i18n()),
                       subtitle: Text(
                           '${"wallet".i18n()}: 0x457E9D3f78F396C98EC3223a42585490465E8172'),
                     ),
@@ -325,7 +325,7 @@ class _CryptoHome extends State<CryptoHome> {
                     ),
                     ListTile(
                       leading: const Icon(Icons.monetization_on),
-                      title: Text('Doe USD Coin para o Mariguelinho'),
+                      title: Text("give-usdcoin".i18n()),
                       subtitle: Text(
                           '${"wallet".i18n()}: 0xD2CD120D1D5703c6f3AFe4ED2b92B969b2B593C9'),
                     ),
@@ -386,8 +386,8 @@ class _CryptoHome extends State<CryptoHome> {
                       height: 300,
                     ),
                     ListTile(
-                      leading: Icon(Icons.monetization_on),
-                      title: Text('Doe Cardano para o Mariguelinho'),
+                      leading: const Icon(Icons.monetization_on),
+                      title: Text("give-cardano".i18n()),
                       subtitle: Text(
                           '${"wallet".i18n()}: addr1vyhl9t3lvn5jmp5hd6vqektqal4yvurcs39mwjgq6lhdwfcgytgff'),
                     ),
@@ -447,10 +447,10 @@ class _CryptoHome extends State<CryptoHome> {
                       ),
                       height: 300,
                     ),
-                    const ListTile(
-                      leading: Icon(Icons.monetization_on),
-                      title: Text('Faça um Pix para o Mariguelinho.'),
-                      subtitle: Text('https://pt.wikipedia.org/wiki/Fascismo'),
+                    ListTile(
+                      leading: const Icon(Icons.monetization_on),
+                      title: Text("make-a-brazilian-pix".i18n()),
+                      subtitle: const Text('https://pt.wikipedia.org/wiki/Fascismo'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
