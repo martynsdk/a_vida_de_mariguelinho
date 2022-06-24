@@ -1,9 +1,9 @@
-import 'package:Mariguelinho/about_him.dart';
-import 'package:Mariguelinho/ask_the_cat.dart';
-import 'package:Mariguelinho/funny_cat_videos.dart';
-import 'package:Mariguelinho/marighellos_pictures.dart';
-import 'package:Mariguelinho/nelson_mandela.dart';
-import 'package:Mariguelinho/soccer_team.dart';
+import 'package:a_vida_de_mariguelinho/about_him.dart';
+import 'package:a_vida_de_mariguelinho/ask_the_cat.dart';
+import 'package:a_vida_de_mariguelinho/funny_cat_videos.dart';
+import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
+import 'package:a_vida_de_mariguelinho/nelson_mandela.dart';
+import 'package:a_vida_de_mariguelinho/soccer_team.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
