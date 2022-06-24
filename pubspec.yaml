@@ -1,4 +1,4 @@
-name: a_vida_de_mariguelinho
+name: Mariguelinho
 description: Apenas um simples aplicativo que fiz para aprender Flutter e homenagear um amiguinho.
 
 # The following line prevents the package from being accidentally published to
@@ -59,8 +59,8 @@ dev_dependencies:
   flutter_launcher_icons: ^0.9.3
 
 flutter_icons:
-    image_path: 'assets/images/mariguelinho_main_picture.jpg'
-    android: "launcher_icon"
+    image_path: 'assets/images/marighelloscover.jpeg'
+    android: true
     ios: true
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -78,6 +78,7 @@ flutter:
       - lib/i18n/
       - assets/images/nelsonmandela.jpg
       - assets/images/mangrove.jpg
+      - assets/images/marighelloscover.jpeg
       - assets/images/mariguelinho_main_picture.jpg
       - assets/images/mariguelinho1.jpg
       - assets/images/marighelinho2.jpg
