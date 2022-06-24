@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:localization/localization.dart';
 
 class MarighellosPictures extends StatefulWidget {
   const MarighellosPictures({Key? key, required this.title}) : super(key: key);
   final String title;
 
   Widget build(BuildContext context) {
+
+    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
+
     return MaterialApp(
+
+      localizationsDelegates: [
+        // delegate from flutter_localization
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        // delegate from localization package.
+        LocalJsonLocalization.delegate,
+      ],
+
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
@@ -13,7 +28,7 @@ class MarighellosPictures extends StatefulWidget {
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
       ),
-      home: const MarighellosPictures(title: 'Fotinhos do Marighella'),
+      home: MarighellosPictures(title: "mariguelos-pictures".i18n()),
     );
   }
 

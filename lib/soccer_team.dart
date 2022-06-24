@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:localization/localization.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SoccerTeam extends StatefulWidget {
@@ -7,7 +8,7 @@ class SoccerTeam extends StatefulWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'A vida de Mariguelinho',
+      title: "mariguelinhos-life".i18n(),
       theme: ThemeData(
         primaryColor: Colors.redAccent,
         useMaterial3: true,
@@ -54,7 +55,7 @@ class _SoccerTeam extends State<SoccerTeam> {
         appBar: AppBar(
           backgroundColor: Theme.of(context).primaryColor,
           foregroundColor: Theme.of(context).secondaryHeaderColor,
-          title: const Text('O Clube do Coração'),
+          title: Text("favorite-soccer-team".i18n()),
           centerTitle: true,
         ),
         body: Center(
@@ -72,10 +73,10 @@ class _SoccerTeam extends State<SoccerTeam> {
                           'assets/images/sport_club_internacional/sportclubinternacional1.gif',
                           fit: BoxFit.fitHeight),
                     ),
-                    const ListTile(
-                      leading: Icon(Icons.sports_soccer),
-                      title: Text('SPORT CLUB INTERNACIONAL'),
-                      subtitle: Text('O Clube do Povo.'),
+                    ListTile(
+                      leading: const Icon(Icons.sports_soccer),
+                      title: const Text('SPORT CLUB INTERNACIONAL'),
+                      subtitle: Text("peoples-club".i18n()),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -88,7 +89,7 @@ class _SoccerTeam extends State<SoccerTeam> {
                         ),
                         const SizedBox(width: 8),
                         TextButton(
-                          child: const Text('História'),
+                          child: Text("history".i18n()),
                           onPressed: () {
                             _launchUrl2();
                           },
@@ -109,10 +110,10 @@ class _SoccerTeam extends State<SoccerTeam> {
                           'assets/images/sport_club_internacional/sportclubinternacional2.jpg',
                           fit: BoxFit.fitHeight),
                     ),
-                    const ListTile(
-                      leading: Icon(Icons.sports_soccer),
-                      title: Text('ESTÁDIO BEIRA-RIO'),
-                      subtitle: Text('O Gigante da Beira-Rio'),
+                    ListTile(
+                      leading: const Icon(Icons.sports_soccer),
+                      title: Text("beira-rio-stadium".i18n()),
+                      subtitle: Text("giant-beira-rio".i18n()),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -125,7 +126,7 @@ class _SoccerTeam extends State<SoccerTeam> {
                         ),
                         const SizedBox(width: 8),
                         TextButton(
-                          child: const Text('História'),
+                          child: Text("history".i18n()),
                           onPressed: () {
                             _launchUrl4();
                           },

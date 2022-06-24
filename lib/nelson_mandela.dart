@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:localization/localization.dart';
 
 class NelsonMandela extends StatefulWidget {
   const NelsonMandela({Key? key}) : super(key: key);
@@ -6,7 +7,7 @@ class NelsonMandela extends StatefulWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Uma foto de Nelson Mandela',
+      title: "picture-of-nelson-mandela".i18n(),
       theme: ThemeData(
         primaryColor: Colors.redAccent,
         useMaterial3: true,
