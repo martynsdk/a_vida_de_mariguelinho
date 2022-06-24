@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     LocalJsonLocalization.delegate.directories = ['lib/i18n'];
 
     return MaterialApp(
@@ -57,11 +56,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -122,8 +117,6 @@ class _MyHomePageState extends State<MyHomePage> {
       'assets/images/marighelinho53.jpg',
     ];
 
-
-
     final Uri _url1 = Uri.parse(
         'https://pt.wikipedia.org/wiki/Gato#:~:text=O%20gato%20(Felis%20silvestris%20catus,p%C3%A1ssaros%2C%20lagartixas%20e%20alguns%20insetos.');
     void _launchUrl1() async {
@@ -147,18 +140,17 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-
               Card(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                     ListTile(
-                      title: Center(child:
-                      Text("welcome-text".i18n()),
-                      ),
-                      //title: Text('Sejam muito bem-vindxs!'),
-                      subtitle: Center(child: Text("im-mariguelinho".i18n()))
-                    ),
+                    ListTile(
+                        title: Center(
+                          child: Text("welcome-text".i18n()),
+                        ),
+                        //title: Text('Sejam muito bem-vindxs!'),
+                        subtitle:
+                            Center(child: Text("im-mariguelinho".i18n()))),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(imageList[0], fit: BoxFit.fill),
@@ -193,9 +185,9 @@ class _MyHomePageState extends State<MyHomePage> {
                               borderRadius: BorderRadius.circular(8.0)),
                           //ClipRRect for image border radius
                           child: ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
-                            child: Image.asset(imageList[i], fit: BoxFit.fitHeight)
-                          ),
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.asset(imageList[i],
+                                  fit: BoxFit.fitHeight)),
                         ),
                       );
                     },
@@ -353,9 +345,9 @@ class _MyHomePageState extends State<MyHomePage> {
               repeat: true,
               child: FloatingActionButton(
                 //backgroundColor: Theme.of(context).primaryColor,
-                onPressed: () => audioPlayer.open(Audio('assets/audio/beatheart.mp3')),
-                tooltip:
-                "strong-heart".i18n(),
+                onPressed: () =>
+                    audioPlayer.open(Audio('assets/audio/beatheart.mp3')),
+                tooltip: "strong-heart".i18n(),
                 child: const Icon(Icons.favorite,
                     size: 50, color: Colors.redAccent),
                 //child: Text('$_counter'),
