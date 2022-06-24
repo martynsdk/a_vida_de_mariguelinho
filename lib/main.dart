@@ -26,6 +26,23 @@ class MyApp extends StatelessWidget {
     LocalJsonLocalization.delegate.directories = ['lib/i18n'];
 
     return MaterialApp(
+      localeResolutionCallback: (locale, supportedLocales) {
+        if (supportedLocales.contains(locale)) {
+          return locale;
+        }
+
+        // define pt_BR as default when de language code is 'pt'
+        if (locale?.languageCode == 'pt') {
+          return const Locale('pt', 'BR');
+        }
+
+        // default language
+        return const Locale('en', 'US');
+      },
+      supportedLocales: const [
+        Locale('en', 'US'),
+        Locale('pt', 'BR'),
+      ],
       localizationsDelegates: [
         // delegate from flutter_localization
         GlobalMaterialLocalizations.delegate,
