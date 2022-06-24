@@ -11,7 +11,6 @@
     </queries>
    <application
         android:label="a_vida_de_mariguelinho"
-        android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
