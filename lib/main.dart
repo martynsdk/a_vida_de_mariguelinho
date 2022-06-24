@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
       ),
-      home: const MyHomePage(title: 'A vida de Mariguelinho'),
+      home: MyHomePage(title: "mariguelinhos-life".i18n()),
     );
   }
 }

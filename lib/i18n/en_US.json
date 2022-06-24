@@ -1,4 +1,5 @@
 {
+  "mariguelinhos-life": "Mariguelinho's Life",
   "enzo-marighella": "Enzo Marighella",
   "mariguelinho": "Mariguelinho",
   "title-text": "The Life of Mariguelinho",
@@ -20,5 +21,11 @@
   "click-once-ask-questions": "Click Once and Ask Questions",
   "marighellas-history": "That's all folks",
   "aks-get-answer": "Ask a Question and you'll get an Answer",
-  "give-bitcoins": "Give some Bitcoins to Marighellinho"
+  "give-bitcoins": "Give some Bitcoins to Marighellinho",
+  "give-ethereum": "Give some Ethereum to Mariguelinho",
+  "give-shibainu": "Give some ShibaInu to Mariguelinho",
+  "give-dogecoin": "Give some DogeCoin to Mariguelinho",
+  "give-usdcoin": "Give some USD Coins to Mariguelinho",
+  "give-cardano": "Give some Cardano to Mariguelinho",
+  "wallet": "Wallet"
 }
