@@ -79,7 +79,7 @@ class _AboutHim extends State<AboutHim> {
           ),
           ListTile(
             title: Text("about-him".i18n()),
-            subtitle: Text("marighellas-history".i18n()),
+            subtitle: Center(child: Text("marighellas-history".i18n())),
           ),
         ],
       ),

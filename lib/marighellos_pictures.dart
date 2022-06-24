@@ -128,6 +128,7 @@ class _MarighellosPictures extends State<MarighellosPictures> {
                         onTap: () => Navigator.pop(
                           context,
                         ),
+
                       ),
                     );
                   },
