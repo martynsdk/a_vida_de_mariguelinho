@@ -10,10 +10,9 @@
         </intent>
     </queries>
    <application
-
         android:label="a_vida_de_mariguelinho"
         android:name="${applicationName}"
-        android:icon="@mipmap/launcher_icon">
+        android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true"
