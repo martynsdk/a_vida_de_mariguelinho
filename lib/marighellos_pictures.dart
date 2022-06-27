@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
+import 'package:pinch_zoom_image_last/pinch_zoom_image_last.dart';
+
 
 class MarighellosPictures extends StatefulWidget {
   const MarighellosPictures({Key? key, required this.title}) : super(key: key);
@@ -10,7 +12,6 @@ class MarighellosPictures extends StatefulWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
-        secondaryHeaderColor: Colors.white,
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
       ),
@@ -82,6 +83,7 @@ class _MarighellosPictures extends State<MarighellosPictures> {
       'assets/images/marighelinho53.jpg',
     ];
 
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
@@ -101,21 +103,24 @@ class _MarighellosPictures extends State<MarighellosPictures> {
               onTap: () async {
                 await showDialog(
                   context: context,
+                  barrierColor: Colors.transparent,
                   builder: (_) {
                     return Dialog(
-                      child: GestureDetector(
+                      backgroundColor: Colors.transparent,
+                      child:
+                      GestureDetector(
                         child: Hero(
-                            tag: 'imageHero',
+                            tag: 'My Cat Image',
                             transitionOnUserGestures: true,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
-                              child: Image.asset(imageList[index],
-                                  fit: BoxFit.fitHeight),
-                            )),
-                        onTap: () => Navigator.pop(
-                          context,
+                            child: PinchZoomImage(
+                              image: ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.asset(imageList[index], fit: BoxFit.fitHeight)
+                              ),
+                              hideStatusBarWhileZooming: true,
+                              zoomedBackgroundColor: Colors.transparent
+                            ),
                         ),
-
                       ),
                     );
                   },
