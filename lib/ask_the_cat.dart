@@ -30,19 +30,19 @@ class _AskTheCatState extends State<AskTheCat> {
   final Map<String, HighlightedWord> _highlights = {
     "life".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 50),
+          color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 60),
     ),
     "marijuana".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.greenAccent, fontWeight: FontWeight.bold, fontSize: 50),
+          color: Colors.greenAccent, fontWeight: FontWeight.bold, fontSize: 60),
     ),
     "why".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.red, fontWeight: FontWeight.bold, fontSize: 50),
+          color: Colors.red, fontWeight: FontWeight.bold, fontSize: 60),
     ),
     "god".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.green, fontWeight: FontWeight.bold, fontSize: 50),
+          color: Colors.green, fontWeight: FontWeight.bold, fontSize: 60),
     ),
     "here".i18n(): HighlightedWord(
       textStyle: const TextStyle(
@@ -53,27 +53,27 @@ class _AskTheCatState extends State<AskTheCat> {
     ),
     "when".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 60),
     ),
     "like".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 60),
     ),
     "want".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 60),
     ),
     "meows".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 60),
     ),
     "meow".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 60),
     ),
     "cat".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 50),
+          color: Colors.brown, fontWeight: FontWeight.bold, fontSize: 60),
     ),
   };
 
@@ -119,13 +119,15 @@ class _AskTheCatState extends State<AskTheCat> {
       body: SingleChildScrollView(
         reverse: true,
         child: Container(
+          alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 150.0),
           child: Center(
             child: TextHighlight(
+              softWrap: true,
               text: _text,
               words: _highlights,
               textStyle: const TextStyle(
-                fontSize: 32.0,
+                fontSize: 50.0,
                 color: Colors.black,
                 fontWeight: FontWeight.w400,
               ),

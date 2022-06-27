@@ -77,10 +77,13 @@ class _AboutHim extends State<AboutHim> {
             tooltip: "click-once-ask-questions".i18n(),
             child: const Icon(Icons.mic),
           ),
-          ListTile(
-            title: Center( child: Text("about-him".i18n())),
-            subtitle: Center(child: Text("marighellas-history".i18n())),
+          Center(
+            child: ListTile(
+              title: Center( child: Text("about-him".i18n())),
+              subtitle: Center(child: Text("marighellas-history".i18n())),
+            ),
           ),
+
         ],
       ),
     );

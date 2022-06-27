@@ -22,27 +22,27 @@ class SoccerTeam extends StatefulWidget {
   _SoccerTeam createState() => _SoccerTeam();
 }
 
-final Uri _url1 = Uri.parse('https://www.internacional.com.br');
+final Uri _url1 = Uri.parse("_url1".i18n());
 
 void _launchUrl1() async {
   if (!await launchUrl(_url1)) throw 'Could not launch $_url1';
 }
 
 final Uri _url2 =
-    Uri.parse('https://pt.wikipedia.org/wiki/Sport_Club_Internacional');
+    Uri.parse("_url2".i18n());
 
 void _launchUrl2() async {
   if (!await launchUrl(_url2)) throw 'Could not launch $_url2';
 }
 
-final Uri _url3 = Uri.parse('https://www.estadiobeirario.com.br/');
+final Uri _url3 = Uri.parse("_url3".i18n());
 
 void _launchUrl3() async {
   if (!await launchUrl(_url3)) throw 'Could not launch $_url3';
 }
 
 final Uri _url4 =
-    Uri.parse('https://pt.wikipedia.org/wiki/Est%C3%A1dio_Beira-Rio');
+    Uri.parse("_url4".i18n());
 
 void _launchUrl4() async {
   if (!await launchUrl(_url4)) throw 'Could not launch $_url4';
