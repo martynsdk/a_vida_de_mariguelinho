@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 import 'package:pinch_zoom_image_last/pinch_zoom_image_last.dart';
 
-
 class MarighellosPictures extends StatefulWidget {
   const MarighellosPictures({Key? key, required this.title}) : super(key: key);
   final String title;
 
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "title-text".i18n(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
@@ -84,7 +82,6 @@ class _MarighellosPictures extends State<MarighellosPictures> {
       'assets/images/marighelinho53.jpg',
     ];
 
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
@@ -95,9 +92,8 @@ class _MarighellosPictures extends State<MarighellosPictures> {
       body: Center(
         child: GridView.builder(
           itemCount: imageList.length,
-          gridDelegate:
-              const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3
-                  ),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3),
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
               child: Image.asset(imageList[index], fit: BoxFit.cover),
@@ -108,19 +104,17 @@ class _MarighellosPictures extends State<MarighellosPictures> {
                   builder: (_) {
                     return Dialog(
                       backgroundColor: Colors.transparent,
-                      child:
-                      GestureDetector(
+                      child: GestureDetector(
                         child: Hero(
-                            tag: 'My Cat Image',
-                            transitionOnUserGestures: true,
-                            child: PinchZoomImage(
+                          tag: 'My Cat Image',
+                          transitionOnUserGestures: true,
+                          child: PinchZoomImage(
                               image: ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.asset(imageList[index], fit: BoxFit.fitHeight)
-                              ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.asset(imageList[index],
+                                      fit: BoxFit.fitHeight)),
                               hideStatusBarWhileZooming: false,
-                              zoomedBackgroundColor: Colors.transparent
-                            ),
+                              zoomedBackgroundColor: Colors.transparent),
                         ),
                       ),
                     );

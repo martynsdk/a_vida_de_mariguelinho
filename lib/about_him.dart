@@ -8,7 +8,6 @@ class AboutHim extends StatefulWidget {
 
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "title-text".i18n(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
@@ -61,8 +60,7 @@ class _AboutHim extends State<AboutHim> {
           ),
           ListTile(
             title: Center(child: Text("enzo-marighella".i18n())),
-            subtitle: Center(
-                child: Text("press-button-ask-questions".i18n())),
+            subtitle: Center(child: Text("press-button-ask-questions".i18n())),
           ),
           //BUTTONS
           FloatingActionButton(
@@ -70,7 +68,6 @@ class _AboutHim extends State<AboutHim> {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return const AskTheCat();
               }));
-              // Update the state of the app.
               SystemChrome.setPreferredOrientations(
                   [DeviceOrientation.portraitUp]);
             },
@@ -79,11 +76,10 @@ class _AboutHim extends State<AboutHim> {
           ),
           Center(
             child: ListTile(
-              title: Center( child: Text("about-him".i18n())),
+              title: Center(child: Text("about-him".i18n())),
               subtitle: Center(child: Text("marighellas-history".i18n())),
             ),
           ),
-
         ],
       ),
     );

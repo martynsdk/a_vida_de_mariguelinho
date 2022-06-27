@@ -8,6 +8,7 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:localization/localization.dart';
+import 'package:pinch_zoom_image_last/pinch_zoom_image_last.dart';
 import 'crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -17,7 +18,6 @@ import 'package:assets_audio_player/assets_audio_player.dart';
 void main() {
   runApp(const MyApp());
 }
-
 
 void setPageTitle(String title, BuildContext context) {
   SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
     LocalJsonLocalization.delegate.directories = ['lib/i18n'];
 
     return MaterialApp(
-      title: "title-text".i18n(),
+      title: "Mariguelinho",
       localeResolutionCallback: (locale, supportedLocales) {
         if (supportedLocales.contains(locale)) {
           return locale;
@@ -156,8 +156,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('title-text'.i18n()),
         centerTitle: true,
       ),
-      body: Center(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -171,10 +171,23 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         subtitle:
                             Center(child: Text("im-mariguelinho".i18n()))),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(8.0),
-                      child: Image.asset(imageList[0], fit: BoxFit.fill),
+                    GestureDetector(
+                      child: Hero(
+                        tag: "wtf2",
+                        child: PinchZoomImage(
+                            image: ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.asset(imageList[0],
+                                    fit: BoxFit.fitHeight)),
+                            hideStatusBarWhileZooming: false,
+                            zoomedBackgroundColor: Colors.transparent),
+                      ),
                     ),
+                    // ClipRRect(
+                    // borderRadius: BorderRadius.circular(8.0),
+                    // child: Image.asset(imageList[0], fit: BoxFit.fill),
+                    // ),
+
                     ListTile(
                       leading: const Icon(Icons.album),
                       title: Text("the-insanecat".i18n()),
@@ -215,11 +228,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Card(
-                  margin: const EdgeInsets.all(15),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset(imageList[1], fit: BoxFit.fill),
-                  )),
+                margin: const EdgeInsets.all(15),
+                child: GestureDetector(
+                  child: Hero(
+                    tag: "wtf",
+                    child: PinchZoomImage(
+                        image: ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.asset(imageList[1],
+                                fit: BoxFit.fitHeight)),
+                        hideStatusBarWhileZooming: false,
+                        zoomedBackgroundColor: Colors.transparent),
+                  ),
+                ),
+              ),
               Card(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,

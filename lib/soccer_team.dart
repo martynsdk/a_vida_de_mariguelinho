@@ -7,7 +7,6 @@ class SoccerTeam extends StatefulWidget {
 
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "title-text".i18n(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
@@ -28,8 +27,7 @@ void _launchUrl1() async {
   if (!await launchUrl(_url1)) throw 'Could not launch $_url1';
 }
 
-final Uri _url2 =
-    Uri.parse("_url2".i18n());
+final Uri _url2 = Uri.parse("_url2".i18n());
 
 void _launchUrl2() async {
   if (!await launchUrl(_url2)) throw 'Could not launch $_url2';
@@ -41,8 +39,7 @@ void _launchUrl3() async {
   if (!await launchUrl(_url3)) throw 'Could not launch $_url3';
 }
 
-final Uri _url4 =
-    Uri.parse("_url4".i18n());
+final Uri _url4 = Uri.parse("_url4".i18n());
 
 void _launchUrl4() async {
   if (!await launchUrl(_url4)) throw 'Could not launch $_url4';

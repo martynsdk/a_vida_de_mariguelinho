@@ -8,7 +8,6 @@ class FunnyCatVideos extends StatefulWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "title-text".i18n(),
       theme: ThemeData(
         primaryColor: Colors.redAccent,
         useMaterial3: true,
@@ -42,9 +41,8 @@ YoutubePlayerController _controller = YoutubePlayerController(
       enableCaption: true,
       startAt: Duration(seconds: 0),
       useHybridComposition: true,
-    desktopMode: true,
-    strictRelatedVideos: true
-  ),
+      desktopMode: true,
+      strictRelatedVideos: true),
 );
 
 class _FunnyCatVideos extends State<FunnyCatVideos> {
@@ -62,9 +60,7 @@ class _FunnyCatVideos extends State<FunnyCatVideos> {
         children: [
           Expanded(
             child: YoutubePlayerIFrame(
-              controller: _controller,
-                aspectRatio: 16 / 9
-            ),
+                controller: _controller, aspectRatio: 16 / 9),
           ),
         ],
       ),

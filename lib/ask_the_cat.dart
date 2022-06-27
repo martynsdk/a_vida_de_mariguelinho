@@ -11,7 +11,6 @@ class AskTheCat extends StatefulWidget {
 
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "title-text".i18n(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
@@ -143,9 +142,9 @@ class _AskTheCatState extends State<AskTheCat> {
     setState(() => _isListening = false);
     if (!_isListening) {
       bool available = await _speech.initialize(
-        //onStatus: (val) => print('onStatus: $val'),
-        //onError: (val) => print('onError: $val'),
-      );
+          //onStatus: (val) => print('onStatus: $val'),
+          //onError: (val) => print('onError: $val'),
+          );
       if (available) {
         setState(() => _isListening = true);
         _speech.listen(
