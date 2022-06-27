@@ -7,7 +7,7 @@ class NelsonMandela extends StatefulWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "picture-of-nelson-mandela".i18n(),
+      title: "title-text".i18n(),
       theme: ThemeData(
         primaryColor: Colors.redAccent,
         useMaterial3: true,

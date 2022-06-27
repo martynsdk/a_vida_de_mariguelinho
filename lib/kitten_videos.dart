@@ -41,7 +41,10 @@ YoutubePlayerController _controller = YoutubePlayerController(
       enableKeyboard: true,
       enableCaption: true,
       startAt: Duration(seconds: 0),
-      useHybridComposition: true),
+      useHybridComposition: true,
+    desktopMode: true,
+    strictRelatedVideos: true
+  ),
 );
 
 class _FunnyCatVideos extends State<FunnyCatVideos> {
@@ -60,7 +63,7 @@ class _FunnyCatVideos extends State<FunnyCatVideos> {
           Expanded(
             child: YoutubePlayerIFrame(
               controller: _controller,
-              aspectRatio: 16 / 9,
+                aspectRatio: 16 / 9
             ),
           ),
         ],

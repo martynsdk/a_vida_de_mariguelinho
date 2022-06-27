@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
     LocalJsonLocalization.delegate.directories = ['lib/i18n'];
 
     return MaterialApp(
+      title: "title-text".i18n(),
       localeResolutionCallback: (locale, supportedLocales) {
         if (supportedLocales.contains(locale)) {
           return locale;
