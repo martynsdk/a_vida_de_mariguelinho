@@ -165,7 +165,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         title: Center(
                           child: Text("welcome-text".i18n()),
                         ),
-                        //title: Text('Sejam muito bem-vindxs!'),
                         subtitle:
                             Center(child: Text("im-mariguelinho".i18n()))),
                     ClipRRect(
