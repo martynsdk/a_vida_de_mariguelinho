@@ -7,20 +7,7 @@ class MarighellosPictures extends StatefulWidget {
   final String title;
 
   Widget build(BuildContext context) {
-
-    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
-
     return MaterialApp(
-
-      localizationsDelegates: [
-        // delegate from flutter_localization
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        // delegate from localization package.
-        LocalJsonLocalization.delegate,
-      ],
-
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.redAccent,
@@ -120,6 +107,7 @@ class _MarighellosPictures extends State<MarighellosPictures> {
                       child: GestureDetector(
                         child: Hero(
                             tag: 'imageHero',
+                            transitionOnUserGestures: true,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
                               child: Image.asset(imageList[index],

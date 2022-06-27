@@ -78,7 +78,7 @@ class _AboutHim extends State<AboutHim> {
             child: const Icon(Icons.mic),
           ),
           ListTile(
-            title: Text("about-him".i18n()),
+            title: Center( child: Text("about-him".i18n())),
             subtitle: Center(child: Text("marighellas-history".i18n())),
           ),
         ],
