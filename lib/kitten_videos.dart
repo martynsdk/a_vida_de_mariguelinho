@@ -36,8 +36,6 @@ YoutubePlayerController _controller = YoutubePlayerController(
         'WwcvO09mxFg',
         '8i1I7-0shm4',
       ],
-      // Defining custom playlist
-      //startAt: Duration(seconds: 30),
       showControls: true,
       showFullscreenButton: true,
       enableKeyboard: true,

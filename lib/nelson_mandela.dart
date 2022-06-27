@@ -35,7 +35,6 @@ class _NelsonMandela extends State<NelsonMandela> {
         height: MediaQuery.of(context).size.height,
         child: Image.asset('assets/images/nelsonmandela.jpg', fit: BoxFit.fitHeight,),
       )
-      //Image.asset('assets/images/mariguelinho_main_picture.jpg', fit: BoxFit.fitHeight,),
     );
   }
 }

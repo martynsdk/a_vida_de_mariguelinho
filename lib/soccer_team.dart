@@ -8,7 +8,7 @@ class SoccerTeam extends StatefulWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "mariguelinhos-life".i18n(),
+      title: "title-text".i18n(),
       theme: ThemeData(
         primaryColor: Colors.redAccent,
         useMaterial3: true,

@@ -1,6 +1,6 @@
 import 'package:a_vida_de_mariguelinho/about_him.dart';
 import 'package:a_vida_de_mariguelinho/ask_the_cat.dart';
-import 'package:a_vida_de_mariguelinho/funny_cat_videos.dart';
+import 'package:a_vida_de_mariguelinho/kitten_videos.dart';
 import 'package:a_vida_de_mariguelinho/marighellos_pictures.dart';
 import 'package:a_vida_de_mariguelinho/nelson_mandela.dart';
 import 'package:a_vida_de_mariguelinho/soccer_team.dart';
@@ -31,12 +31,10 @@ class MyApp extends StatelessWidget {
           return locale;
         }
 
-        // define pt_BR as default when de language code is 'pt'
         if (locale?.languageCode == 'pt') {
           return const Locale('pt', 'BR');
         }
 
-        // default language
         return const Locale('en', 'US');
       },
       supportedLocales: const [
@@ -44,21 +42,18 @@ class MyApp extends StatelessWidget {
         Locale('pt', 'BR'),
       ],
       localizationsDelegates: [
-        // delegate from flutter_localization
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
-        // delegate from localization package.
         LocalJsonLocalization.delegate,
       ],
       debugShowCheckedModeBanner: false,
-      title: "mariguelinhos-life".i18n(),
       theme: ThemeData(
         primaryColor: Colors.redAccent,
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
       ),
-      home: MyHomePage(title: "mariguelinhos-life".i18n()),
+      home: MyHomePage(title: "title-text".i18n()),
     );
   }
 }
@@ -272,10 +267,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const AskTheCat();
                 }));
-                // Update the state of the app.
                 SystemChrome.setPreferredOrientations(
                     [DeviceOrientation.portraitUp]);
-                // ...
               },
               hoverColor: Colors.redAccent,
             ),
@@ -286,10 +279,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const AboutHim();
                 }));
-                // Update the state of the app.
                 SystemChrome.setPreferredOrientations(
                     [DeviceOrientation.portraitUp]);
-                // ...
               },
               hoverColor: Colors.redAccent,
             ),
@@ -360,7 +351,6 @@ class _MyHomePageState extends State<MyHomePage> {
               repeatPauseDuration: const Duration(milliseconds: 100),
               repeat: true,
               child: FloatingActionButton(
-                //backgroundColor: Theme.of(context).primaryColor,
                 onPressed: () =>
                     audioPlayer.open(Audio('assets/audio/beatheart.mp3')),
                 tooltip: "strong-heart".i18n(),
