@@ -18,6 +18,14 @@ void main() {
   runApp(const MyApp());
 }
 
+
+void setPageTitle(String title, BuildContext context) {
+  SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
+    label: title,
+    primaryColor: Theme.of(context).primaryColor.value,
+  ));
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 

@@ -118,7 +118,7 @@ class _MarighellosPictures extends State<MarighellosPictures> {
                                 borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(imageList[index], fit: BoxFit.fitHeight)
                               ),
-                              hideStatusBarWhileZooming: true,
+                              hideStatusBarWhileZooming: false,
                               zoomedBackgroundColor: Colors.transparent
                             ),
                         ),
