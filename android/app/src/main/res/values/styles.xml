@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:drawable="@android:color/holo_red_dark" />
+        <item>
+            <bitmap
+                android:gravity="center"
+                android:src="@mipmap/ic_launcher" />
+        </item>
+    </layer-list>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:drawable="@android:color/white" />
+    </layer-list>
     <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is off -->
     <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <!-- Show a splash screen on the activity. Automatically removed when
@@ -13,6 +24,12 @@
 
          This Theme is only used starting with V2 of Flutter's Android embedding. -->
     <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
-        <item name="android:windowBackground">?android:colorBackground</item>
+        <item name="android:windowBackground">@drawable/normal_background</item>
     </style>
+
+
+
+
+
+
 </resources>
