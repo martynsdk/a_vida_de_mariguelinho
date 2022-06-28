@@ -139,12 +139,12 @@ class _MyHomePageState extends State<MyHomePage> {
     ];
 
     final Uri _url1 = Uri.parse(
-        'https://pt.wikipedia.org/wiki/Gato#:~:text=O%20gato%20(Felis%20silvestris%20catus,p%C3%A1ssaros%2C%20lagartixas%20e%20alguns%20insetos.');
+        "cats-link".i18n());
     void _launchUrl1() async {
       if (!await launchUrl(_url1)) throw 'Could not launch $_url1';
     }
 
-    final Uri _url2 = Uri.parse('https://pt.wikipedia.org/wiki/Fel%C3%ADdeos');
+    final Uri _url2 = Uri.parse("felids-link".i18n());
     void _launchUrl2() async {
       if (!await launchUrl(_url2)) throw 'Could not launch $_url2';
     }
@@ -183,10 +183,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             zoomedBackgroundColor: Colors.transparent),
                       ),
                     ),
-                    // ClipRRect(
-                    // borderRadius: BorderRadius.circular(8.0),
-                    // child: Image.asset(imageList[0], fit: BoxFit.fill),
-                    // ),
 
                     ListTile(
                       leading: const Icon(Icons.album),

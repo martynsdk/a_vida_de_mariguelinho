@@ -31,7 +31,7 @@ class _AskTheCatState extends State<AskTheCat> {
       textStyle: const TextStyle(
           color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 60),
     ),
-    "marijuana".i18n(): HighlightedWord(
+    "because".i18n(): HighlightedWord(
       textStyle: const TextStyle(
           color: Colors.greenAccent, fontWeight: FontWeight.bold, fontSize: 60),
     ),
@@ -45,9 +45,7 @@ class _AskTheCatState extends State<AskTheCat> {
     ),
     "here".i18n(): HighlightedWord(
       textStyle: const TextStyle(
-        color: Colors.pink,
-        fontWeight: FontWeight.bold,
-        fontSize: 50,
+        color: Colors.pink, fontWeight: FontWeight.bold, fontSize: 60,
       ),
     ),
     "when".i18n(): HighlightedWord(
