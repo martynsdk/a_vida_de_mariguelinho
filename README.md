@@ -1,6 +1,7 @@
 # a_vida_de_mariguelinho
 
-Apenas um simples aplicativo..
+This is my Hello World App with Flutter environment.
+Just a simple app I made to learn Flutter and honor my little friend.
 
 ## Getting Started
 
